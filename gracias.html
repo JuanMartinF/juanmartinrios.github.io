@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gracias por tu mensaje</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 70vh;
+    }
+
+    main h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--ocre);
+    }
+
+    main p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--ocre);
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: var(--marron);
+    }
+  </style>
+</head>
+<body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const toggle = document.querySelector(".menu-toggle");
+          const nav = document.querySelector("nav");
+      
+          toggle.addEventListener("click", () => {
+            nav.classList.toggle("active");
+          });
+        });
+      </script>
+
+<header>
+    <h1>Galería de Juan Martín Ríos</h1>
+  
+    <!-- Botón hamburguesa (solo visible en móvil) -->
+    <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+  
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="sobre.html">Sobre mí</a>
+      <a href="galeria.html">Galería</a>
+      <a href="comprar.html">Comprar</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>¡Gracias por tu mensaje!</h2>
+    <p>Tu correo se ha enviado correctamente. Te responderemos lo antes posible.</p>
+    <a href="index.html" class="btn">Volver al inicio</a>
+  </main>
+
+  <footer>
+    <p>
+      &copy; 2025 Juan Martín Ríos | 
+      <a href="contacto.html">Contacto</a> | 
+      <a href="mailto:juanmartinrios749@gmail.com">juanmartinrios749@gmail.com</a> | 
+      <a href="https://www.instagram.com/gansosinuoso/" target="_blank">Instagram</a>
+    </p>
+  </footer>
+</body>
+</html>

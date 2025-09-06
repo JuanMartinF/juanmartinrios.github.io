@@ -33,6 +33,7 @@
   
 
 
+
 <header>
   <h1>Galería de Juan Martín Ríos</h1>
 
@@ -49,13 +50,15 @@
 </header>
 
 
+
+
   <main>
     <h2>Contacto</h2>
     <p style="text-align:center; max-width:600px; margin:auto;">
       Si estás interesado en adquirir una obra o tienes alguna consulta, completa el formulario y nos pondremos en contacto contigo.
     </p>
 
-    <form class="contact-form" action="#" method="post">
+    <form class="contact-form" action="https://formspree.io/f/xnnblqod" method="post" >
       <label for="nombre">Nombre</label>
       <input type="text" id="nombre" name="nombre" required>
 
@@ -64,6 +67,12 @@
 
       <label for="mensaje">Mensaje</label>
       <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+      
+      <!-- Opcional: asunto personalizado -->
+      <input type="hidden" name="_subject" value="Nuevo mensaje desde la web">
+
+    <!-- Redirección a la página de gracias -->
+    <input type="hidden" name="_next" value="gracias.html">
 
       <button type="submit">Enviar mensaje</button>
     </form>
