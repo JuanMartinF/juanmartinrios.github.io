@@ -32,8 +32,24 @@
   </style>
 </head>
 <body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const toggle = document.querySelector(".menu-toggle");
+          const nav = document.querySelector("nav");
+      
+          toggle.addEventListener("click", () => {
+            nav.classList.toggle("active");
+          });
+        });
+      </script>
+
   <header>
     <h1>Galería de Juan Martín Ríos</h1>
+
+  <!-- Botón hamburguesa (solo visible en móvil) -->
+  <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+
     <nav>
       <a href="index.html">Inicio</a>
       <a href="sobre.html">Sobre mí</a>
