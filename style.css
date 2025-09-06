@@ -282,15 +282,17 @@ footer .social-link {
 .dots button {
   border: none;
   background: rgba(255,255,255,0.6);
-  width: 12px;
-  height: 12px;
-  margin: 0 5px;
+  width: 8px;     /* antes 12px */
+  height: 8px;    /* antes 12px */
+  margin: 0 4px;
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.2s;
 }
 
 .dots button.active {
   background: rgba(255,255,255,0.95);
+  transform: scale(1.2);  /* pequeño efecto de “resaltar” el activo */
 }
+

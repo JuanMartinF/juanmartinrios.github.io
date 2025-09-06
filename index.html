@@ -20,46 +20,7 @@
     });
   </script>
 
-  <!--script slider -->
 
-  <script>
-    const slides = document.querySelector('.slides');
-    const slide = document.querySelectorAll('.slide');
-    const prevBtn = document.querySelector('.prev');
-    const nextBtn = document.querySelector('.next');
-    const dotsContainer = document.querySelector('.dots');
-  
-    let index = 0;
-    const totalSlides = slide.length;
-  
-    // Crear dots dinámicamente
-    for (let i = 0; i < totalSlides; i++) {
-      const dot = document.createElement('button');
-      if (i === 0) dot.classList.add('active');
-      dot.addEventListener('click', () => showSlide(i));
-      dotsContainer.appendChild(dot);
-    }
-  
-    const dots = document.querySelectorAll('.dots button');
-  
-    function showSlide(n) {
-      index = (n + totalSlides) % totalSlides;
-      slides.style.transform = `translateX(${-index * 100}%)`;
-  
-      // Actualizar dots
-      dots.forEach(dot => dot.classList.remove('active'));
-      dots[index].classList.add('active');
-    }
-  
-    prevBtn.addEventListener('click', () => showSlide(index - 1));
-    nextBtn.addEventListener('click', () => showSlide(index + 1));
-  
-    // Cambio automático cada 10s
-    setInterval(() => {
-      showSlide(index + 1);
-    }, 10000);
-  </script>
-  
   
 
   <header>
@@ -110,6 +71,7 @@
       <div class="dots"></div>
     </section>
     
+    
 
 
   </main>
@@ -152,6 +114,47 @@
   </p>
 </footer>
 
+
+  <!--script slider -->
+
+  <script>
+    const slides = document.querySelector('.slides');
+    const slide = document.querySelectorAll('.slide');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    const dotsContainer = document.querySelector('.dots');
+  
+    let index = 0;
+    const totalSlides = slide.length;
+  
+    // Crear dots dinámicamente
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('button');
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => showSlide(i));
+      dotsContainer.appendChild(dot);
+    }
+  
+    const dots = document.querySelectorAll('.dots button');
+  
+    function showSlide(n) {
+      index = (n + totalSlides) % totalSlides;
+      slides.style.transform = `translateX(${-index * 100}%)`;
+  
+      // Actualizar dots
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[index].classList.add('active');
+    }
+  
+    prevBtn.addEventListener('click', () => showSlide(index - 1));
+    nextBtn.addEventListener('click', () => showSlide(index + 1));
+  
+    // Cambio automático cada 10s
+    setInterval(() => {
+      showSlide(index + 1);
+    }, 10000);
+  </script>
+  
 
 </body>
 </html>
