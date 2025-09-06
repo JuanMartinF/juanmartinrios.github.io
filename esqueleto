@@ -1,8 +1,16 @@
-/mi-web-arte
+/juanmartinrios
    |-- index.html
+      |-- Cuadro deslizable (con click)
    |-- sobre.html
    |-- galeria.html
+      |-- buscador de cuadros
+      |-- organizador por todos/colecciones/fechas/
+      |-- por defecto: todos
+         |-- cada colección tiene su página
+         |-- cada cuadro tiene su página
+
    |-- comprar.html
+      |-- nuestro criterio de precios
    |-- contacto.html
    |-- style.css
    |-- /imagenes
