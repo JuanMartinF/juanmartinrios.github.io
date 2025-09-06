@@ -213,33 +213,6 @@ footer .social-link {
   }
 }
 
-
-/* inteno grid
-
-.grid-galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-}
-
-.grid-galeria a {
-  text-decoration: none;
-  color: inherit;
-  text-align: center;
-  transition: transform 0.2s ease;
-}
-
-.grid-galeria a:hover {
-  transform: scale(1.03);
-}
-
-.grid-galeria img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}*/
-
 .card a {
   text-decoration: none;   /* quita el subrayado */
   color: inherit;          /* usa el mismo color del texto normal */
