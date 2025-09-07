@@ -98,43 +98,7 @@
 
   </main>
 
-<footer>
-  <p>
-    &copy; 2025 Juan Martín Ríos. Todos los derechos reservados.
-  </p>
-    <p>
-    <a href="contacto.html">Contacto</a> | 
-    <a href="mailto:juanmartinrios749@gmail.com" class="social-link">
-      <svg xmlns="http://www.w3.org/2000/svg" 
-           width="16" height="16" viewBox="0 0 24 24" 
-           fill="currentColor" style="vertical-align: middle; margin-right:4px;">
-        <path d="M20 4H4c-1.103 0-2 .897-2 
-                 2v12c0 1.103.897 2 2 
-                 2h16c1.103 0 2-.897 
-                 2-2V6c0-1.103-.897-2-2-2zm0 
-                 2v.511l-8 5.333-8-5.333V6h16zM4 
-                 18V8.489l8 5.333 8-5.333V18H4z"/>
-      </svg>
-      juanmartinrios749@gmail.com
-    </a> | 
-    <a href="https://www.instagram.com" target="_blank" class="social-link">
-      <svg xmlns="http://www.w3.org/2000/svg" 
-           width="16" height="16" viewBox="0 0 24 24" 
-           fill="currentColor" style="vertical-align: middle; margin-right:4px;">
-        <path d="M7 2C4.243 2 2 4.243 2 7v10c0 
-                 2.757 2.243 5 5 5h10c2.757 0 
-                 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 
-                 2h10c1.654 0 3 1.346 3 3v10c0 
-                 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 
-                 1.346-3 3-3zm5 2a5 5 0 100 10 5 5 0 
-                 000-10zm0 2a3 3 0 110 6 3 3 0 
-                 010-6zm4.5-.5a1.5 1.5 0 11-3 0 
-                 1.5 1.5 0 013 0z"/>
-      </svg>
-      Instagram
-    </a>
-  </p>
-</footer>
+
 
 
   <!--script slider -->
@@ -177,6 +141,28 @@
     }, 10000);
   </script>
   
+  <script>
+  // Load footer 
+  fetch('footer.html') 
+      .then(response => response.text()) 
+      .then(data => { 
+          document.getElementById('footer').innerHTML = data; 
+      }); 
+</script>
+
+<!-- cargar footer -->
+
+<script>
+  fetch("footer.html") // 👈 Ruta absoluta (ajústala si usas subcarpeta en GitHub Pages)
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    })
+    .catch(err => console.error("Error al cargar el footer:", err));
+</script>
+
+<div id="footer"></div>
+
 
 </body>
 </html>
