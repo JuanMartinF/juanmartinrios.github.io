@@ -49,25 +49,59 @@
 </header>
 
 
-<div id="volver-atras" class="volver-atras">
-  <button onclick="history.back()" aria-label="Volver atrás">←</button>
-</div>
 
-<script>
-  // Si el historial es menor o igual a 1, ocultamos el botón
-  if (window.history.length <= 1) {
-    document.getElementById("volver-atras").style.display = "none";
-  }
-</script>
     
 
-  <h2>Comprar</h2>
-  <div class="gallery">
-    <img src="imagenes/cuadro1.jpg" alt="Cuadro 1">
-    <img src="imagenes/cuadro2.jpg" alt="Cuadro 2">
-    <img src="imagenes/cuadro3.jpg" alt="Cuadro 3">
+<main class="comprar">
+
+  <div id="volver-atras" class="volver-atras">
+    <button onclick="history.back()" aria-label="Volver atrás">←</button>
   </div>
-  </main>
+  
+  <script>
+    // Si el historial es menor o igual a 1, ocultamos el botón
+    if (window.history.length <= 1) {
+      document.getElementById("volver-atras").style.display = "none";
+    }
+  </script>
+
+  <!-- Bloque 1: Cuadros originales -->
+  <section class="originales">
+    <h2>Cuadros originales</h2>
+    <p>
+      Cada cuadro de Juan Martín Ríos es una pieza única.  
+      Si deseas adquirir una obra original, ponte en contacto con nosotros directamente.
+    </p>
+    <a href="contacto.html" class="btn">Contactar para comprar</a>
+  </section>
+
+  <!-- Bloque 2: Reproducciones y merchandising -->
+  <section class="reproducciones">
+    <h2>Reproducciones y merchandising</h2>
+    <p>
+      Puedes llevar el arte de Juan Martín Ríos a tu día a día: camisetas, tazas, pósters y más.  
+      Explora la tienda online para descubrir todos los productos disponibles.
+    </p>
+
+    <div class="catalogo">
+      <div class="producto">
+        <img src="img/merch/camiseta.jpg" alt="Camiseta con estampado de cuadro">
+        <p>Camisetas</p>
+      </div>
+      <div class="producto">
+        <img src="img/merch/taza.jpg" alt="Taza con estampado de cuadro">
+        <p>Tazas</p>
+      </div>
+      <div class="producto">
+        <img src="img/merch/poster.jpg" alt="Póster con impresión de cuadro">
+        <p>Pósters</p>
+      </div>
+    </div>
+
+    <a href="https://tutienda.com" target="_blank" class="btn">Ir a la tienda online</a>
+  </section>
+</main>
+
 
   <footer>
     <p>
