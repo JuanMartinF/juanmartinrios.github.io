@@ -36,22 +36,20 @@
 <body>
 
 
+
+
 <script>
-  fetch("https://themather314.github.io/juanmartinrios.github.io/header_cuadros.html") // Ruta absoluta (ajústala si usas subcarpeta en GitHub Pages)
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("header").innerHTML = data;
-    })
-    .catch(err => console.error("Error al cargar el header:", err));
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector("nav");
+
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+  });
 </script>
 
 
-
-<div id="header"></div>
-
-
-
-<!--
   <header>
     <div id="volver-atras" class="volver-atras">
       <button onclick="history.back()" aria-label="Volver atrás">←</button>
@@ -66,9 +64,7 @@
 
 <h1><a href="https://themather314.github.io/juanmartinrios.github.io/index.html" class="titulo-link">Galería de Juan Martín Ríos</a></h1>
 
-  -->
-
-  <!-- Botón hamburguesa (solo visible en móvil) --><!--
+  <!-- Botón hamburguesa (solo visible en móvil) -->
   <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
     
     <nav>
@@ -79,7 +75,7 @@
       <a href="https://themather314.github.io/juanmartinrios.github.io/contacto.html">Contacto</a>
     </nav>
   </header>
- -->
+
 
 
   <main class="cuadro-detalle">
