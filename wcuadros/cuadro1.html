@@ -89,13 +89,19 @@
     </div>
   </main>
 
-  <footer>
-    <p>
-      &copy; 2025 Juan Martín Ríos | 
-      <a href="contacto.html">Contacto</a> | 
-      <a href="mailto:juanmartinrios749@gmail.com">juanmartinrios749@gmail.com</a> | 
-      <a href="https://www.instagram.com/" target="_blank">Instagram</a>
-    </p>
-  </footer>
+<!-- cargar footer -->
+
+<script>
+  fetch("https://themather314.github.io/juanmartinrios.github.io/footer.html") // 👈 Ruta absoluta (ajústala si usas subcarpeta en GitHub Pages)
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    })
+    .catch(err => console.error("Error al cargar el footer:", err));
+</script>
+
+<div id="footer"></div>
+  
+
 </body>
 </html>
