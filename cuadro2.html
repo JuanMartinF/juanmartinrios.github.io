@@ -46,7 +46,19 @@
     
 
   <header>
-    <h1>Galería de Juan Martín Ríos</h1>
+
+    <div id="volver-atras" class="volver-atras">
+        <button onclick="history.back()" aria-label="Volver atrás">←</button>
+      </div>
+      
+      <script>
+        // Si el historial es menor o igual a 1, ocultamos el botón
+        if (window.history.length <= 1) {
+          document.getElementById("volver-atras").style.display = "none";
+        }
+      </script>
+
+<h1><a href="https://themather314.github.io/juanmartinrios.github.io/index.html" class="titulo-link">Galería de Juan Martín Ríos</a></h1>
 
   <!-- Botón hamburguesa (solo visible en móvil) -->
   <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
@@ -58,9 +70,12 @@
       <a href="comprar.html">Comprar</a>
       <a href="contacto.html">Contacto</a>
     </nav>
+
+    
   </header>
 
   <main class="cuadro-detalle">
+    
     <img src="https://themather314.github.io/juanmartinrios.github.io/cuadros/cuadro2.jpg" alt="Cuadro 1">
 
     <div class="info-cuadro">

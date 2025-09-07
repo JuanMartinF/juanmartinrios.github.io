@@ -296,3 +296,31 @@ footer .social-link {
   transform: scale(1.2);  /* pequeño efecto de “resaltar” el activo */
 }
 
+/* boton volver a inicio sin subrayado*/
+.titulo-link {
+  text-decoration: none;   /* sin subrayado */
+  color: inherit;          /* mismo color que el texto */
+  cursor: pointer;         /* opcional: deja el puntero normal */
+}
+
+.titulo-link:hover {
+  color: inherit;          /* evita que cambie el color al pasar el ratón */
+}
+
+/*boton minimalista volver atras*/
+.volver-atras {
+  margin: 0.5rem 1rem;
+}
+
+.volver-atras button {
+  background: none;
+  border: none;
+  color: #444;
+  font-size: 1.2rem;   /* un poco más grande para que la flecha se vea */
+  cursor: pointer;
+  padding: 0;
+}
+
+.volver-atras button:hover {
+  color: #000;         /* se oscurece al pasar el ratón */
+}

@@ -49,7 +49,18 @@
 </header>
 
 
-  <main>
+<div id="volver-atras" class="volver-atras">
+  <button onclick="history.back()" aria-label="Volver atrás">←</button>
+</div>
+
+<script>
+  // Si el historial es menor o igual a 1, ocultamos el botón
+  if (window.history.length <= 1) {
+    document.getElementById("volver-atras").style.display = "none";
+  }
+</script>
+    
+
   <h2>Comprar</h2>
   <div class="gallery">
     <img src="imagenes/cuadro1.jpg" alt="Cuadro 1">
