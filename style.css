@@ -285,7 +285,7 @@ footer .social-link {
   width: 8px;     /* antes 12px */
   height: 8px;    /* antes 12px */
   margin: 0 4px;
-  border-radius: 50%;
+  border-radius: 15%;
   display: inline-block;
   cursor: pointer;
   transition: background 0.3s, transform 0.2s;
