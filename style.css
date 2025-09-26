@@ -230,7 +230,6 @@ footer .social-link {
   max-width: 900px;
   margin: 2rem auto;
   overflow: hidden;
-  object-fit: contain;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
@@ -247,9 +246,11 @@ footer .social-link {
 
 .slide img {
   width: 100%;
-  height: auto;
+  object-fit: contain;
+  height: 900px;
   display: block;
 }
+
 
 /* Botones flecha */
 .prev, .next {
