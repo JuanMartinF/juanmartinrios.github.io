@@ -149,7 +149,7 @@ footer {
 .card img {
   width: 100%;
   height: 250px;   /* altura fija para todas */
-  object-fit: cover;
+  object-fit: contain;
   border-bottom: 2px solid var(--ocre);
 }
 
@@ -377,3 +377,4 @@ footer .social-link {
   font-size: 0.95rem;
   color: #333;
 }
+
