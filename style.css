@@ -121,6 +121,7 @@ footer {
 /* estilo adaptado*/
 
 .card {
+  z-index: 1;
   background: #fff;
   border-radius: 8px;
   overflow: hidden;
@@ -171,6 +172,7 @@ footer .social-link {
 
 /* Botón hamburguesa oculto en escritorio */
 .menu-toggle {
+  position: relative;
   display: none;
   font-size: 1.5rem;
   background: none;

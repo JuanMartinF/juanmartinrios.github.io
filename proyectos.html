@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería - Juan Martín Ríos</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+  .slider {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+  }
+
+  .slider img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+  }
+
+  .slider img.active {
+    left: 0;
+    opacity: 1;
+  }
+
+  </style>
+
+
+
+</head>
+
+
+
+
+<body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector("nav");
+  
+      toggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    });
+  </script>
+
+
+<header>
+  <h1><a href="https://themather314.github.io/juanmartinrios.github.io/index.html" class="titulo-link">Galería de Juan Martín Ríos</a>: Proyectos</h1>
+
+  <!-- Botón hamburguesa (solo visible en móvil) -->
+  <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="sobre.html">Sobre mí</a>
+    <a href="proyectos.html">Proyectos</a>
+    <a href="comprar.html">Comprar</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+</header>
+
+
+  <main>
+  
+    <div id="volver-atras" class="volver-atras">
+      <button onclick="history.back()" aria-label="Volver atrás">←</button>
+    </div>
+    
+    <script>
+      // Si el historial es menor o igual a 1, ocultamos el botón
+      if (window.history.length <= 1) {
+        document.getElementById("volver-atras").style.display = "none";
+      }
+    </script>
+    
+
+    <h2>Mis proyectos</h2>
+    <p style="text-align:center; max-width:700px; margin:auto; margin-bottom:2rem;">
+      Aquí encontrarás todos mis proyectos. Aún estamos en proceso de digitalización. Gracias por tu paciencia.
+    </p>
+
+    <div class="gallery">
+
+      <div class="card">
+        <div class="slider" data-slider>
+          <img src="cuadros/a000.jpg" class="active">
+          <img src="cuadros/a002.jpg">
+          <img src="cuadros/a003.jpg">
+        </div>
+        <div class="title">
+          <h3><a href="proyectos/proyectoA/html/proyectoA.html">El paisaje de la Llave</a></h3>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="slider" data-slider>
+          <img src="cuadros/a000.jpg" class="active">
+          <img src="cuadros/a002.jpg">
+          <img src="cuadros/a003.jpg">
+        </div>
+        <div class="title">
+          <h3><a href="proyectos/proyectoB/html/proyectoB.html">Vórtices entrelazados</a></h3>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="slider" data-slider>
+          <img src="cuadros/a000.jpg" class="active">
+          <img src="cuadros/a002.jpg">
+          <img src="cuadros/a003.jpg">
+        </div>
+        <div class="title">
+          <h3><a href="proyectos/proyectoC/html/proyectoC.html">Bajo el volcán</a></h3>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="slider" data-slider>
+          <img src="cuadros/a000.jpg" class="active">
+          <img src="cuadros/a002.jpg">
+          <img src="cuadros/a003.jpg">
+        </div>
+        <div class="title">
+          <h3><a href="proyectos/proyectoD/html/proyectoD.html">Primeros cuadros</a></h3>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="slider" data-slider>
+          <img src="cuadros/a000.jpg" class="active">
+          <img src="cuadros/a002.jpg">
+          <img src="cuadros/a003.jpg">
+        </div>
+        <div class="title">
+          <h3><a href="proyectos/proyectoE/html/proyectoE.html">Obras independientes</a></h3>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="slider" data-slider>
+          <img src="cuadros/a000.jpg" class="active">
+          <img src="cuadros/a002.jpg">
+          <img src="cuadros/a003.jpg">
+        </div>
+        <div class="title">
+          <h3><a href="proyectos/proyectoF/html/proyectoF.html">Proyecto sin nombre</a></h3>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="slider" data-slider>
+          <img src="cuadros/a000.jpg" class="active">
+          <img src="cuadros/a002.jpg">
+          <img src="cuadros/a003.jpg">
+        </div>
+        <div class="title">
+          <h3><a href="proyectos/proyectoG/html/proyectoG.html">Proyecto sin nombre</a></h3>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="slider" data-slider>
+          <img src="cuadros/a000.jpg" class="active">
+          <img src="cuadros/a002.jpg">
+          <img src="cuadros/a003.jpg">
+        </div>
+        <div class="title">
+          <h3><a href="proyectos/proyectoH/html/proyectoH.html">Toda mi obra</a></h3>
+        </div>
+      </div>
+
+
+
+  </main>
+
+  <script>
+    // Script para sliders de cada tarjeta
+    document.querySelectorAll("[data-slider]").forEach(slider => {
+      const images = slider.querySelectorAll("img");
+      let index = 0;
+      setInterval(() => {
+        images[index].classList.remove("active");
+        index = (index + 1) % images.length;
+        images[index].classList.add("active");
+      }, 4000); // cambia cada 4s
+    });
+  </script>
+
+
+<!-- cargar footer -->
+
+<script>
+  fetch("https://themather314.github.io/juanmartinrios.github.io/footer.html") // Ruta absoluta (ajústala si usas subcarpeta en GitHub Pages)
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    })
+    .catch(err => console.error("Error al cargar el footer:", err));
+</script>
+
+<div id="footer"></div>
+
+
+</body>
+</html>
