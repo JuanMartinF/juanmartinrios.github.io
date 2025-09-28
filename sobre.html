@@ -8,45 +8,61 @@
 
 
   <style>
-    .collapsible_wiki {
-      background-color: #f1f1f1;
-      color: #333;
-      cursor: pointer;
-      padding: 10px;
-      width: 100%;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      transition: background-color 0.3s ease;
-    }
+  
+/* Menú principal (negro) */
+.navbar {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+}
 
-    .collapsible_wiki:hover {
-      background-color: #ddd;
-    }
+/* Botón dentro del menú */
+.navbar button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
 
-    .active {
-      background-color: #ccc;
-    }
-    .collapsible_wiki .arrow {
-      transition: transform 0.3s ease;
-      font-size: 14px;
-    }
+/* Secciones colapsables tipo Wikipedia */
+.collapsible {
+  background-color: #fafafa; /* gris claro */
+  color: #333;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.3s ease;
+}
 
-    .collapsible_wiki.active .arrow {
-      transform: rotate(90deg);
-    }
-    .content {
-      padding: 0 15px;
-      display: none;
-      overflow: hidden;
-      background-color: #fafafa;
-      border-left: 3px solid #ccc;
-      margin-bottom: 10px;
-    }
+.collapsible:hover {
+  background-color: #ddd;
+}
+
+.collapsible .arrow {
+  transition: transform 0.3s ease;
+  font-size: 14px;
+}
+
+.collapsible.active .arrow {
+  transform: rotate(90deg);
+}
+
+.content {
+  padding: 0 15px;
+  display: none;
+  overflow: hidden;
+  background-color: #fff;
+  border-left: 3px solid #ccc;
+  margin-bottom: 10px;
+}
+
   </style>
 
 </head>
@@ -105,7 +121,7 @@
 <p>Aquí encontrarás explicaciones sobre mis proyectos y los conceptos que los motivaron.</p>
 
 
-    <button class="collapsible_wiki">Sobre mi proyecto 'El Paisaje de la Llave'. <span class="arrow">▶</span></button>
+    <button class="collapsible">Sobre mi proyecto 'El Paisaje de la Llave'. <span class="arrow">▶</span></button>
     <div class="content">
     <article>
       <h1>El Paisaje de la Llave</h1>
@@ -250,7 +266,7 @@
   </div>
     
   <script>
-    const collapsibles = document.querySelectorAll(".collapsible_wiki");
+    const collapsibles = document.querySelectorAll(".collapsible");
     collapsibles.forEach(btn => {
       btn.addEventListener("click", function() {
         this.classList.toggle("active");
@@ -269,7 +285,7 @@
 <!-- cargar footer -->
 
 <script>
-  fetch("https://themather314.github.io/juanmartinrios.github.io/footer.html") // 👈 Ruta absoluta (ajústala si usas subcarpeta en GitHub Pages)
+  fetch("https://themather314.github.io/juanmartinrios.github.io/footer.html") // Ruta absoluta (ajústala si usas subcarpeta en GitHub Pages)
     .then(response => response.text())
     .then(data => {
       document.getElementById("footer").innerHTML = data;
