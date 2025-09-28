@@ -8,7 +8,7 @@
 
 
   <style>
-    .collapsible {
+    .collapsible_wiki {
       background-color: #f1f1f1;
       color: #333;
       cursor: pointer;
@@ -18,17 +18,27 @@
       text-align: left;
       outline: none;
       font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       transition: background-color 0.3s ease;
     }
 
-    .collapsible:hover {
+    .collapsible_wiki:hover {
       background-color: #ddd;
     }
 
     .active {
       background-color: #ccc;
     }
+    .collapsible_wiki .arrow {
+      transition: transform 0.3s ease;
+      font-size: 14px;
+    }
 
+    .collapsible_wiki.active .arrow {
+      transform: rotate(90deg);
+    }
     .content {
       padding: 0 15px;
       display: none;
@@ -95,7 +105,7 @@
 <p>Aquí encontrarás explicaciones sobre mis proyectos y los conceptos que los motivaron.</p>
 
 
-    <button class="collapsible">Sobre El Paisaje de la Llave.</button>
+    <button class="collapsible_wiki">Sobre El Paisaje de la Llave. <span class="arrow">▶</span></button>
     <div class="content">
     <article>
       <h1>El Paisaje de la Llave</h1>
@@ -231,20 +241,16 @@
     
       <h3>Memoria y cierre</h3>
       <p>
-        Este proyecto ha derivado en escritura, fotografía y cine. Comprendí que el
-        <em>Paisaje de la Llave</em> es también esta memoria, un ensayo sobre el proceso
-        creativo.
+      Al final me di cuenta de que realmente el Paisaje de la LLave era toda esta ”memoria” que intenta explicar tantas cosas, así que el proyecto también deriva en este ensayo y en una película que muestra el proceso creativo.
       </p>
       <p>
-        No aspira a mostrarnos el paisaje detrás de la puerta, solo a sugerir un modelo para
-        entenderlo. Como la ciencia, que no revela la realidad, sino que nos da sombras para
-        comprender cómo funciona.
+      Este proyecto solo divaga sobre el paisaje de la llave, ni alcanza ni cree posible asomarse al paisaje que hay detrás de la puerta que abre. Como la ciencia, que no nos muestra la realidad, sino que nos propone modelos para entender como funciona. Como las sombras en la caverna de Patón.
       </p>
     </article>
   </div>
     
   <script>
-    const collapsibles = document.querySelectorAll(".collapsible");
+    const collapsibles = document.querySelectorAll(".collapsible_wiki");
     collapsibles.forEach(btn => {
       btn.addEventListener("click", function() {
         this.classList.toggle("active");
