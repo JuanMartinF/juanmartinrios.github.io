@@ -2,9 +2,9 @@ import pandas as pd
 from pathlib import Path
 
 # Rutas de entrada
-catalogo_path = "proyectos/proyectoA/catalogo_de_cuadrosA.csv"
-template_path = "proyectos/proyectoA/html/a003.html"
-output_dir = Path("proyectos/proyectoA/html")
+catalogo_path = "catalogo_de_cuadrosA.csv"
+template_path = "html/a003.html"
+output_dir = Path("html")
 output_dir.mkdir(exist_ok=True)
 
 # Cargar catálogo
