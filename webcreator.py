@@ -2,9 +2,9 @@ import pandas as pd
 from pathlib import Path
 
 # Rutas de entrada
-catalogo_path = "catalogo1.csv"
-template_path = "wcuadros/cuadro1.html"
-output_dir = Path("wcuadros")
+catalogo_path = "proyectos/proyectoA/catalogo_de_cuadrosA.csv"
+template_path = "proyectos/proyectoA/html/a003.html"
+output_dir = Path("proyectos/proyectoA/html/prueba")
 output_dir.mkdir(exist_ok=True)
 
 # Cargar catálogo
@@ -25,22 +25,22 @@ for _, row in df.iterrows():
         descripcion = row["descripcion"]
         # Crear contenido a partir de la plantilla
         html = template
-        html = html.replace("Nombre del Cuadro 1", nombre)
-        html = html.replace("cuadro1.jpg", f"{codigo}.jpg")
-        html = html.replace("Cuadro 1", nombre)
-        html = html.replace("Feynman diagrams", nombre)
-        html = html.replace("1600 €", str(precio))
-        html = html.replace("80 x 60 cm", str(dimensiones))
+        html = html.replace("Paisaje cristalino", nombre)
+        html = html.replace("a003_web.jpg", f"{codigo}_web.jpg")
+        html = html.replace("Paisaje cristalino", nombre)
+        html = html.replace("Paisaje cristalino", nombre)
+        html = html.replace("672 €", str(precio))
+        html = html.replace("40x40", str(dimensiones))
         # Reemplazar la descripción (puede tener varios párrafos)
         # Vamos a poner todo en un solo <p>
-        inicio = html.find('<div class="descripcion-cuadro">')
-        fin = html.find('</div>', inicio)
-        descripcion_html = f'<div class="descripcion-cuadro">\n      <p>{descripcion}</p>\n    </div>'
-        html = html[:inicio] + descripcion_html + html[fin+6:]
+#        inicio = html.find('<div class="descripcion-cuadro">')
+ #       fin = html.find('</div>', inicio)
+  #      descripcion_html = f'<div class="descripcion-cuadro">\n      <p>{descripcion}</p>\n    </div>'
+   #     html = html[:inicio] + descripcion_html + html[fin+6:]
         # Guardar archivo
         output_path = output_dir / f"{codigo}.html"
         with open(output_path, "w", encoding="utf-8") as f:
             f.write(html)
         print("Archivo"+codigo+".html creado con exito")  
 
-print("Archivos generados en la carpeta 'wcuadros'")
+print("Archivos generados en la carpeta 'proyectos/proyectoA/html/prueba'")
