@@ -4,7 +4,7 @@ from pathlib import Path
 # Rutas de entrada
 catalogo_path = "proyectos/proyectoA/catalogo_de_cuadrosA.csv"
 template_path = "proyectos/proyectoA/html/a003.html"
-output_dir = Path("proyectos/proyectoA/html/prueba")
+output_dir = Path("proyectos/proyectoA/html")
 output_dir.mkdir(exist_ok=True)
 
 # Cargar catálogo
@@ -29,7 +29,7 @@ for _, row in df.iterrows():
         html = html.replace("a003_web.jpg", f"{codigo}_web.jpg")
         html = html.replace("Paisaje cristalino", nombre)
         html = html.replace("Paisaje cristalino", nombre)
-        html = html.replace("672 €", str(precio))
+        html = html.replace("672€", str(precio)+'€')
         html = html.replace("40x40", str(dimensiones))
         # Reemplazar la descripción (puede tener varios párrafos)
         # Vamos a poner todo en un solo <p>

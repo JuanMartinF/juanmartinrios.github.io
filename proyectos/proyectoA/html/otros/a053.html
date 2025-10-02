@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rosas degradadas - Juan Martín Ríos</title>
+  <link rel="stylesheet" href="https://themather314.github.io/juanmartinrios.github.io/style.css">
+  <style>
+    .cuadro-detalle {
+      max-width: 900px;
+      margin: 2rem auto;
+      text-align: center;
+    }
+
+    .cuadro-detalle img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .info-cuadro {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .descripcion-cuadro {
+      margin-top: 2rem;
+      text-align: justify;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+
+<body>
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector("nav");
+
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+  });
+</script>
+
+
+  <header>
+    <div id="volver-atras" class="volver-atras">
+      <button onclick="history.back()" aria-label="Volver atrás">←</button>
+    </div>
+    
+    <script>
+      // Si el historial es menor o igual a 1, ocultamos el botón
+      if (window.history.length <= 1) {
+        document.getElementById("volver-atras").style.display = "none";
+      }
+    </script>
+
+<h1><a href="https://themather314.github.io/juanmartinrios.github.io/index.html" class="titulo-link">Galería de Juan Martín Ríos</a></h1>
+
+  <!-- Botón hamburguesa (solo visible en móvil) -->
+  <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+    
+    <nav>
+      <a href="https://themather314.github.io/juanmartinrios.github.io/index.html">Inicio</a>
+      <a href="https://themather314.github.io/juanmartinrios.github.io/sobre.html">Sobre mí</a>
+      <a href="https://themather314.github.io/juanmartinrios.github.io/proyectos.html">Proyectos</a>
+      <a href="https://themather314.github.io/juanmartinrios.github.io/comprar.html">Comprar</a>
+      <a href="https://themather314.github.io/juanmartinrios.github.io/contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+
+
+  <main class="cuadro-detalle">
+    <img src="https://themather314.github.io/juanmartinrios.github.io/proyectos/proyectoA/pics/a053_web.jpg" alt="Isla 1">
+
+    <div class="info-cuadro">
+      <p><strong>Título:</strong> Isla 1</p>
+      <p><strong>Precio:</strong> 672€</p>
+      <p><strong>Dimensiones:</strong> 42x42</p>
+    </div>
+
+    <div class="descripcion-cuadro">
+
+    </div>
+  </main>
+
+<!-- cargar footer -->
+
+<script>
+  fetch("https://themather314.github.io/juanmartinrios.github.io/footer.html") // Ruta absoluta (ajústala si usas subcarpeta en GitHub Pages)
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    })
+    .catch(err => console.error("Error al cargar el footer:", err));
+</script>
+
+<div id="footer"></div>
+  
+
+</body>
+</html>
