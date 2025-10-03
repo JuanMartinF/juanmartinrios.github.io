@@ -319,6 +319,19 @@
     });
   </script>
 
+<script>
+  // Script para sliders de cada tarjeta
+  document.querySelectorAll("[data-slider]").forEach(slider => {
+    const images = slider.querySelectorAll("img");
+    let index = 0;
+    setInterval(() => {
+      images[index].classList.remove("active");
+      index = (index + 1) % images.length;
+      images[index].classList.add("active");
+    }, 3000); // cambia cada 4s
+  });
+</script>
+
   </main>
 
 <!-- cargar footer -->
