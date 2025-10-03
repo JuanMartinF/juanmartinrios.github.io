@@ -7,93 +7,7 @@
   <meta name="description" content="Galería online de Juan Martín Ríos.">
   <meta name="keywords" content="arte, pintura, cuadros, galería, online">
   <link rel="stylesheet" href="style.css">
-
-  <style>
-  
-    /* Menú principal (negro) */
-    .navbar {
-      background-color: #000;
-      color: #fff;
-      padding: 10px;
-    }
-    
-    /* Botón dentro del menú */
-    .navbar button {
-      background: none;
-      border: none;
-      color: #fff;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    
-    /* Secciones colapsables tipo Wikipedia */
-    .collapsible {
-      background-color: #fafafa; /* gris claro */
-      color: #333;
-      cursor: pointer;
-      padding: 10px;
-      width: 100%;
-      border: none;
-      text-align: left;
-      font-size: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      transition: background-color 0.3s ease;
-    }
-    
-    .collapsible:hover {
-      background-color: #ddd;
-    }
-    
-    .collapsible .arrow {
-      transition: transform 0.3s ease;
-      font-size: 14px;
-    }
-    
-    .collapsible.active .arrow {
-      transform: rotate(90deg);
-    }
-    
-    .content {
-      padding: 0 15px;
-      display: none;
-      overflow: hidden;
-      background-color: #fff;
-      border-left: 3px solid #ccc;
-      margin-bottom: 10px;
-    }
-    
-    
-    .slider {
-        position: relative;
-        width: 60%;
-        height: 420px;
-        overflow: hidden;
-      }
-    
-    
-      .slider img {
-        width: 100%;
-        height: 420px;
-       /* object-fit: cover;*/
-       object-fit: contain;
-        position: absolute;
-        top: 0;
-        left: 100%;
-        opacity: 0;
-        transition: all 1s ease-in-out;
-      }
-    
-      .slider img.active {
-        left: 0;
-        opacity: 1;
-      }
-    
-      </style>
-
 </head>
-
 
 <body>
   
@@ -137,26 +51,6 @@
     </p>
   
   
-
-      <div class="slider" data-slider>
-        <a href="wcuadros/a000.html">
-        <img src="https://themather314.github.io/juanmartinrios.github.io/cuadros/a000.jpg" class="active"></a>
-
-        <a href="https://themather314.github.io/juanmartinrios.github.io/proyectos/proyectoA/html/a054.html">
-        <img src="https://themather314.github.io/juanmartinrios.github.io/proyectos/proyectoA/pics/a054_web.jpg"></a>
-
-        <a href="wcuadros/a000.html">
-        <img src="https://themather314.github.io/juanmartinrios.github.io/cuadros/a003.jpg"></a>
-
-        <a href="wcuadros/a004.html">
-          <img src="https://themather314.github.io/juanmartinrios.github.io/cuadros/a004.jpg" alt="Cuadro 2">
-        </a>
-
-        <a href="https://themather314.github.io/juanmartinrios.github.io/proyectos/proyectoA/html/a052.html">
-          <img src="https://themather314.github.io/juanmartinrios.github.io/proyectos/proyectoA/pics/a052_web.jpg" alt="Cuadro 3">
-        </a>
-      </div>
-  
   
     <section class="slider">
       <div class="slides">
@@ -199,21 +93,53 @@
       <div class="dots"></div>
       
     </section>
+    
+    
+
 
   </main>
 
 
+
+
+  <!--script slider -->
+
   <script>
-    // Script para sliders de cada tarjeta
-    document.querySelectorAll("[data-slider]").forEach(slider => {
-      const images = slider.querySelectorAll("img");
-      let index = 0;
-      setInterval(() => {
-        images[index].classList.remove("active");
-        index = (index + 1) % images.length;
-        images[index].classList.add("active");
-      }, 3500); // cambia cada 2s
-    });
+    const slides = document.querySelector('.slides');
+    const slide = document.querySelectorAll('.slide');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    const dotsContainer = document.querySelector('.dots');
+  
+    let index = 0;
+    const totalSlides = slide.length;
+  
+    // Crear dots dinámicamente
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('button');
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => showSlide(i));
+      dotsContainer.appendChild(dot);
+    }
+  
+    const dots = document.querySelectorAll('.dots button');
+  
+    function showSlide(n) {
+      index = (n + totalSlides) % totalSlides;
+      slides.style.transform = `translateX(${-index * 100}%)`;
+  
+      // Actualizar dots
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[index].classList.add('active');
+    }
+  
+    prevBtn.addEventListener('click', () => showSlide(index - 1));
+    nextBtn.addEventListener('click', () => showSlide(index + 1));
+  
+    // Cambio automático cada 10s
+    setInterval(() => {
+      showSlide(index + 1);
+    }, 4000);
   </script>
   
   <script>
