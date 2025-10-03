@@ -66,7 +66,7 @@
 
 .slider {
     position: relative;
-    width: 100%;
+    width: 60%;
     height: 220px;
     overflow: hidden;
   }
@@ -88,7 +88,6 @@
     left: 0;
     opacity: 1;
   }
-
 
   </style>
 
@@ -140,6 +139,8 @@
       }
     </script>
 
+
+
     <h2>Bienvenidos</h2>
     <p>Hola, me llamo Juan Martín Ríos. Nací en Granada en 1964 y me licencié en Bellas Artes en la universidad de Sevilla en 1988. Siempre he tenido un interés especial por la física y las matemáticas. Particularmente por la teoría de grupos, la mecánica cuántica y el electromagnetismo. Mi fascinación por estas áreas me impulsa a buscar la manera de integrarlas en la pintura, y ha llevado mi obra por territorios tan inexplorados que ni siquiera concebía posibles.</p>
 
@@ -147,9 +148,9 @@
     <div class="card">
       <div class="slider" data-slider>
         <img src="https://themather314.github.io/juanmartinrios.github.io/fotos/juan1.jpg" class="active">
-        <img src="https://themather314.github.io/juanmartinrios.github.io/fotos/juan2.jpg" class="active">
-        <img src="https://themather314.github.io/juanmartinrios.github.io/fotos/juan3.jpg" class="active">
-        <img src="https://themather314.github.io/juanmartinrios.github.io/fotos/juan4.jpg" class="active">
+        <img src="https://themather314.github.io/juanmartinrios.github.io/fotos/juan2.jpg">
+        <img src="https://themather314.github.io/juanmartinrios.github.io/fotos/juan3.jpg">
+        <img src="https://themather314.github.io/juanmartinrios.github.io/fotos/juan4.jpg">
       </div>
       <div class="title">
         <h3>Este soy yo.</h3>
@@ -157,9 +158,15 @@
     </div>
 
 
-
 <h2> Mi blog</h2>
 <p>Aquí encontrarás explicaciones sobre mis proyectos y los conceptos que los motivaron.</p>
+
+<button class="collapsible">Mi visión del arte. <span class="arrow">▶</span></button>
+<div class="content">
+<article>
+En redacción...
+</article>
+</div>
 
 
     <button class="collapsible">Sobre mi proyecto 'El Paisaje de la Llave'. <span class="arrow">▶</span></button>
@@ -306,6 +313,26 @@
     </article>
   </div>
     
+  <button class="collapsible">Sobre mi proyecto 'Vórtices entrelazados' <span class="arrow">▶</span></button>
+  <div class="content">
+  <article>
+  En redacción...
+  </article>
+  </div>
+
+  <script>
+    // Script para sliders de cada tarjeta
+    document.querySelectorAll("[data-slider]").forEach(slider => {
+      const images = slider.querySelectorAll("img");
+      let index = 0;
+      setInterval(() => {
+        images[index].classList.remove("active");
+        index = (index + 1) % images.length;
+        images[index].classList.add("active");
+      }, 2000); // cambia cada 2s
+    });
+  </script>
+
   <script>
     const collapsibles = document.querySelectorAll(".collapsible");
     collapsibles.forEach(btn => {
@@ -321,18 +348,7 @@
     });
   </script>
 
-<script>
-  // Script para sliders de cada tarjeta
-  document.querySelectorAll("[data-slider]").forEach(slider => {
-    const images = slider.querySelectorAll("img");
-    let index = 0;
-    setInterval(() => {
-      images[index].classList.remove("active");
-      index = (index + 1) % images.length;
-      images[index].classList.add("active");
-    }, 3000); // cambia cada 3s
-  });
-</script>
+
 
   </main>
 
