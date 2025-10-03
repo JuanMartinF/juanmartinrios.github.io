@@ -5,6 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galería - Juan Martín Ríos</title>
   <link rel="stylesheet" href="https://themather314.github.io/juanmartinrios.github.io/style.css">
+
+
+
+  <style>
+  
+    /* Menú principal (negro) */
+    .navbar {
+      background-color: #000;
+      color: #fff;
+      padding: 10px;
+    }
+    
+    /* Botón dentro del menú */
+    .navbar button {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    
+    /* Secciones colapsables tipo Wikipedia */
+    .collapsible {
+      background-color: #fafafa; /* gris claro */
+      color: #333;
+      cursor: pointer;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background-color 0.3s ease;
+    }
+    
+    .collapsible:hover {
+      background-color: #ddd;
+    }
+    
+    .collapsible .arrow {
+      transition: transform 0.3s ease;
+      font-size: 14px;
+    }
+    
+    .collapsible.active .arrow {
+      transform: rotate(90deg);
+    }
+    
+    .content {
+      padding: 0 15px;
+      display: none;
+      overflow: hidden;
+      background-color: #fff;
+      border-left: 3px solid #ccc;
+      margin-bottom: 10px;
+    }
+    
+      </style>
+
+
 </head>
 
 
