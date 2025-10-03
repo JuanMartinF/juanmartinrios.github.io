@@ -145,7 +145,7 @@
     <p>Hola, me llamo Juan Martín Ríos. Nací en Granada en 1964 y me licencié en Bellas Artes en la universidad de Sevilla en 1988. Siempre he tenido un interés especial por la física y las matemáticas. Particularmente por la teoría de grupos, la mecánica cuántica y el electromagnetismo. Mi fascinación por estas áreas me impulsa a buscar la manera de integrarlas en la pintura, y ha llevado mi obra por territorios tan inexplorados que ni siquiera concebía posibles.</p>
 
 
-    <div class="card">
+
       <div class="slider" data-slider>
         <img src="https://themather314.github.io/juanmartinrios.github.io/fotos/juan1.jpg" class="active">
         <img src="https://themather314.github.io/juanmartinrios.github.io/fotos/juan2.jpg">
@@ -153,19 +153,16 @@
         <img src="https://themather314.github.io/juanmartinrios.github.io/fotos/juan4.jpg">
       </div>
       <div class="title">
-        <h3>Este soy yo.</h3>
+        <h3 style="text-align: center;">Este soy yo.</h3>
       </div>
-    </div>
 
-    <div class="card">
+
+
       <div class="slider" data-slider>
         <img src="https://themather314.github.io/juanmartinrios.github.io/fotos/estudio1.jpg" class="active">
         <img src="https://themather314.github.io/juanmartinrios.github.io/fotos/estudio2.jpg">
       </div>
-      <div class="title">
-        <h3>Este es mi estudio.</h3>
-      </div>
-    </div>
+      <h3 style="text-align: center;">Este es mi estudio.</h3>
 
     <section class="slider">
       <div class="slides">
@@ -199,10 +196,12 @@
       <button class="prev">&#10094;</button>
       <button class="next">&#10095;</button>
     
+    
       <!-- Dots -->
       <div class="dots"></div>
       
     </section>
+
 
 
 
@@ -400,6 +399,48 @@ En redacción...
 
 
   </main>
+
+  <!--script slider -->
+
+  <script>
+    const slides = document.querySelector('.slides');
+    const slide = document.querySelectorAll('.slide');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    const dotsContainer = document.querySelector('.dots');
+  
+    let index = 0;
+    const totalSlides = slide.length;
+  
+    // Crear dots dinámicamente
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('button');
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => showSlide(i));
+      dotsContainer.appendChild(dot);
+    }
+  
+    const dots = document.querySelectorAll('.dots button');
+  
+    function showSlide(n) {
+      index = (n + totalSlides) % totalSlides;
+      slides.style.transform = `translateX(${-index * 100}%)`;
+  
+      // Actualizar dots
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[index].classList.add('active');
+    }
+  
+    prevBtn.addEventListener('click', () => showSlide(index - 1));
+    nextBtn.addEventListener('click', () => showSlide(index + 1));
+  
+    // Cambio automático cada 10s
+    setInterval(() => {
+      showSlide(index + 1);
+    }, 4000);
+  </script>
+
+
 
 <!-- cargar footer -->
 
