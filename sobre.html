@@ -63,6 +63,31 @@
   margin-bottom: 10px;
 }
 
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+  }
+
+  .slider img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+  }
+
+  .slider img.active {
+    left: 0;
+    opacity: 1;
+  }
+
+
   </style>
 
 </head>
@@ -125,7 +150,7 @@
         <img src="https://themather314.github.io/juanmartinrios.github.io/proyectos/fotos/juan4.jpg" class="active">
       </div>
       <div class="title">
-        <h3><a href="proyectos/proyectoF/html/proyectoF.html">Cuadros antiguos</a></h3>
+        <h3>Este soy yo.</h3>
       </div>
     </div>
 
