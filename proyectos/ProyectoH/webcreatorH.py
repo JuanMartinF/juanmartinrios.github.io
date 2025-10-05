@@ -2,8 +2,8 @@ import pandas as pd
 from pathlib import Path
 
 # Rutas de entrada
-catalogo_path = "catalogo_de_cuadrosA.csv"
-template_path = "html/a003.html"
+catalogo_path = "catalogo_de_cuadrosH.csv"
+template_path = "html/h01.html"
 output_dir = Path("html")
 output_dir.mkdir(exist_ok=True)
 
@@ -25,12 +25,12 @@ for _, row in df.iterrows():
         descripcion = row["descripcion"]
         # Crear contenido a partir de la plantilla
         html = template
-        html = html.replace("Paisaje cristalino", nombre)
-        html = html.replace("a003_web.jpg", f"{codigo}_web.jpg")
-        html = html.replace("Paisaje cristalino", nombre)
-        html = html.replace("Paisaje cristalino", nombre)
-        html = html.replace("896€", str(precio)+'€')
-        html = html.replace("40x40", str(dimensiones))
+        html = html.replace("Rastro 1", nombre)
+        html = html.replace("h01_web.jpg", f"{codigo}_web.jpg")
+        html = html.replace("Rastro 1", nombre)
+        html = html.replace("Rastro 1", nombre)
+        html = html.replace("Contacta con nosotros.", str(precio))
+        html = html.replace("4 de 20x25 cm.", str(dimensiones))
         html = html.replace("a003", codigo)
         # Reemplazar la descripción (puede tener varios párrafos)
         # Vamos a poner todo en un solo <p>
@@ -45,4 +45,4 @@ for _, row in df.iterrows():
             f.write(html)
         print("Archivo"+codigo+".html creado con exito")  
 
-print("Archivos generados en la carpeta 'proyectos/proyectoA/html/prueba'")
+print("Archivos generados en la carpeta 'proyectos/ProyectoH/html'")
