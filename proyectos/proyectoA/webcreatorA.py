@@ -31,12 +31,14 @@ for _, row in df.iterrows():
         html = html.replace("Paisaje cristalino", nombre)
         html = html.replace("896€", str(precio)+'€')
         html = html.replace("40x40", str(dimensiones))
+        html = html.replace("a003", codigo)
         # Reemplazar la descripción (puede tener varios párrafos)
         # Vamos a poner todo en un solo <p>
-#        inicio = html.find('<div class="descripcion-cuadro">')
- #       fin = html.find('</div>', inicio)
-  #      descripcion_html = f'<div class="descripcion-cuadro">\n      <p>{descripcion}</p>\n    </div>'
-   #     html = html[:inicio] + descripcion_html + html[fin+6:]
+        if "descripcion"!='nan':
+            inicio = html.find('<div class="descripcion-cuadro">')
+            fin = html.find('</div>', inicio)
+            descripcion_html = f'<div class="descripcion-cuadro">\n      <p>{descripcion}</p>\n    </div>'
+            html = html[:inicio] + descripcion_html + html[fin+6:]
         # Guardar archivo
         output_path = output_dir / f"{codigo}.html"
         with open(output_path, "w", encoding="utf-8") as f:
