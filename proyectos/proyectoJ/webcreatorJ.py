@@ -27,8 +27,8 @@ for _, row in df.iterrows():
         html = template
         html = html.replace("Up", nombre)
         html = html.replace("j01_web.jpg", f"{codigo}_web.jpg")
-        html = html.replace("Hipocampo 1", nombre)
-        html = html.replace("Hipocampo 1", nombre)
+        html = html.replace("Hipocampo I", nombre)
+        html = html.replace("Hipocampo I", nombre)
         html = html.replace("932€", str(precio))
         html = html.replace("32x52 cm", str(dimensiones))
         html = html.replace("j01", codigo)
