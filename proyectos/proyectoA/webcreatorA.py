@@ -29,7 +29,7 @@ for _, row in df.iterrows():
         html = html.replace("a003_web.jpg", f"{codigo}_web.jpg")
         html = html.replace("Paisaje cristalino", nombre)
         html = html.replace("Paisaje cristalino", nombre)
-        html = html.replace("896€", str(precio)+'€')
+        html = html.replace("896€", str(precio))
         html = html.replace("40x40", str(dimensiones))
         html = html.replace("a003", codigo)
         # Reemplazar la descripción (puede tener varios párrafos)
