@@ -31,6 +31,7 @@ for _, row in df.iterrows():
         html = html.replace("Mi primer abstracto", nombre)
         #html = html.replace("896€", str(precio)+'€')
         html = html.replace("40x40", str(dimensiones))
+        html = html.replace("f01", str(codigo))
         # Reemplazar la descripción (puede tener varios párrafos)
         # Vamos a poner todo en un solo <p>
 #        inicio = html.find('<div class="descripcion-cuadro">')
