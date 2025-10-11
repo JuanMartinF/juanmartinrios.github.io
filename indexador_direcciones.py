@@ -1,13 +1,13 @@
 import pandas as pd
 
 # Cargar catálogo
-df = pd.read_csv("proyectos/proyectoJ/catalogo_de_cuadrosJ.csv")
+df = pd.read_csv("proyectos/proyectoD/catalogo_de_cuadrosD.csv")
 
 # Plantilla del bloque de tarjeta
 template = """
 <div class="card">
-  <a href="https://themather314.github.io/juanmartinrios.github.io/proyectos/proyectoJ/html/{codigo}.html">
-    <img src="https://themather314.github.io/juanmartinrios.github.io/proyectos/proyectoJ/pics/{codigo}_web.jpg" alt="{nombre}">
+  <a href="https://themather314.github.io/juanmartinrios.github.io/proyectos/proyectoD/html/{codigo}.html">
+    <img src="https://themather314.github.io/juanmartinrios.github.io/proyectos/proyectoD/pics/{codigo}_web.jpg" alt="{nombre}">
     <p class="title">{nombre}</p>
   </a>
 </div>
