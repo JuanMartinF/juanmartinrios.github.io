@@ -33,3 +33,4 @@ Disallow: /proyectos/proyectoC/pics/
 Disallow: /*.py$
 Disallow: /*.csv$
 
+Sitemap: https://juanmartinrios.com/sitemap.xml
