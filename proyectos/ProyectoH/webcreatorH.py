@@ -31,7 +31,7 @@ for _, row in df.iterrows():
         html = html.replace("Rastro 1", nombre)
         html = html.replace("Contacta con nosotros.", str(precio))
         html = html.replace("4 de 20x25 cm.", str(dimensiones))
-        html = html.replace("a003", codigo)
+        html = html.replace("h01", codigo)
         # Reemplazar la descripción (puede tener varios párrafos)
         # Vamos a poner todo en un solo <p>
         if "descripcion"!='':
