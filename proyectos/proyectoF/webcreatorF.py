@@ -22,6 +22,7 @@ for _, row in df.iterrows():
         nombre = row["Nombre"]
         precio = row["Precio"]
         dimensiones = row["Dimensiones"]
+        print(dimensiones)
         descripcion = row["descripcion"]
         # Crear contenido a partir de la plantilla
         html = template
