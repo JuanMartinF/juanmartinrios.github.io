@@ -206,7 +206,7 @@ Un pequeño proyecto que ocupa un gran lugar en mi corazón.</p>
 <!-- cargar footer -->
 
 <script>
-  fetch("../../../footer.html") // Ruta absoluta (ajústala si usas subcarpeta en GitHub Pages)
+  fetch("../../../footer.html") 
     .then(response => response.text())
     .then(data => {
       document.getElementById("footer").innerHTML = data;
