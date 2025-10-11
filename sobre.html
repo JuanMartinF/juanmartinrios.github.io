@@ -111,7 +111,7 @@
     });
   </script>  
 
-  <h1><a href="https://themather314.github.io/juanmartinrios.github.io/index.html" class="titulo-link">Galería de Juan Martín Ríos:</a> Sobre mí</h1>
+  <h1><a href="index.html" class="titulo-link">Galería de Juan Martín Ríos:</a> Sobre mí</h1>
 
   <!-- Botón hamburguesa (solo visible en móvil) -->
   <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
@@ -147,10 +147,10 @@
 
 
       <div class="slider" data-slider>
-        <img src="https://themather314.github.io/juanmartinrios.github.io/fotos/juan1.jpg" class="active">
-        <img src="https://themather314.github.io/juanmartinrios.github.io/fotos/juan2.jpg">
-        <img src="https://themather314.github.io/juanmartinrios.github.io/fotos/juan3.jpg">
-        <img src="https://themather314.github.io/juanmartinrios.github.io/fotos/juan4.jpg">
+        <img src="fotos/juan1.jpg" class="active">
+        <img src="fotos/juan2.jpg">
+        <img src="fotos/juan3.jpg">
+        <img src="fotos/juan4.jpg">
       </div>
       <div class="title">
         <h3 style="text-align: center;">Este soy yo.</h3>
@@ -159,19 +159,19 @@
 
 
       <div class="slider" data-slider>
-        <img src="https://themather314.github.io/juanmartinrios.github.io/fotos/estudio1.jpg" class="active">
-        <img src="https://themather314.github.io/juanmartinrios.github.io/fotos/estudio2.jpg">
+        <img src="fotos/estudio1.jpg" class="active">
+        <img src="fotos/estudio2.jpg">
       </div>
       <h3 style="text-align: center;">Este es mi estudio.</h3>
 
       <div class="slider" data-slider>
-        <img src="https://themather314.github.io/juanmartinrios.github.io/fotos/espacio1.jpg" class="active">
-        <img src="https://themather314.github.io/juanmartinrios.github.io/fotos/espacio2.jpg">
-        <img src="https://themather314.github.io/juanmartinrios.github.io/fotos/espacio3.jpg">
-        <img src="https://themather314.github.io/juanmartinrios.github.io/fotos/espacio4.jpg">
-        <img src="https://themather314.github.io/juanmartinrios.github.io/fotos/espacio5.jpg">
-        <img src="https://themather314.github.io/juanmartinrios.github.io/fotos/espacio6.jpg">
-        <img src="https://themather314.github.io/juanmartinrios.github.io/fotos/espacio7.jpg">
+        <img src="fotos/espacio1.jpg" class="active">
+        <img src="fotos/espacio2.jpg">
+        <img src="fotos/espacio3.jpg">
+        <img src="fotos/espacio4.jpg">
+        <img src="fotos/espacio5.jpg">
+        <img src="fotos/espacio6.jpg">
+        <img src="fotos/espacio7.jpg">
       </div>
       <h3 style="text-align: center;">Mis cuadros en el espacio.</h3>
 
@@ -333,7 +333,14 @@ En redacción...
       </p>
     </article>
   </div>
-    
+  
+  <button class="collapsible">Sobre mi proyecto 'Sobre el volcán' <span class="arrow">▶</span></button>
+  <div class="content">
+  <article>
+  En redacción...
+  </article>
+  </div>
+
   <button class="collapsible">Sobre mi proyecto 'Vórtices entrelazados' <span class="arrow">▶</span></button>
   <div class="content">
   <article>
@@ -380,7 +387,7 @@ En redacción...
 <!-- cargar footer -->
 
 <script>
-  fetch("https://themather314.github.io/juanmartinrios.github.io/footer.html") // Ruta absoluta (ajústala si usas subcarpeta en GitHub Pages)
+  fetch("footer.html") // Ruta absoluta (ajústala si usas subcarpeta en GitHub Pages)
     .then(response => response.text())
     .then(data => {
       document.getElementById("footer").innerHTML = data;
