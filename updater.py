@@ -62,7 +62,7 @@ html_template1 = """<!DOCTYPE html>
     <img src="../../../proyectos/{proj}/pics/{codigo}_web.jpg" alt="{titulo}">
     <div class="info-cuadro">
       <p><strong>Título:</strong> {titulo}</p>
-      <p><strong>Precio:</strong> {precio}€</p>
+      <p><strong>Precio:</strong> {precio}</p>
       <p><strong>Dimensiones:</strong> {dimensiones}</p>
       <p><strong>Código:</strong> {codigo}</p>
     </div>
