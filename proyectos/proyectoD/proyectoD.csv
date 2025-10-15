@@ -1,0 +1,13 @@
+Codigo,Nombre,Coleccion ,Precio,Dimensiones,area (cm^2),Categoria,Valoración personal,descripcion,Formato,Existing_html,Ready,Venta
+d01,Trilogía electromagnética I,,1.572€,3 de 36x28 cm,3024,,3,Óleo sobre papel lienzo.,,sí,,si
+d02,Trilogía electromagnética II,,1.572€,3 de 36x28 cm,3024,,3,Óleo sobre papel lienzo.,,no,,si
+d03,Trilogía electromagnética III,,1.572€,3 de 36x28 cm,3024,,3,Óleo sobre papel lienzo.,,no,,si
+d04,Trilogía electromagnética IV,,1.572€,3 de 36x28 cm,3024,,3,Óleo sobre papel lienzo.,,no,,si
+d05,Trilogía electromagnética V,,1.572€,3 de 36x28 cm,3024,,3,Óleo sobre papel lienzo.,,no,,si
+d06,Cuatro escalas electromagnéticas onduladas,,2.419€,4 de 42x30 cm,5040,,2,Óleo sobre papel lienzo. En restauración.,,no,,si
+d07,Trilogía electromagnética VI,,1.572€,3 de 36x28 cm,3024,,3,Óleo sobre papel lienzo.,,no,,si
+d08,Campo electromagnético ondulado I,,704€,41x33 cm,1353,,3,Óleo sobre lienzo.,,no,,si
+d09,Campo electromagnético ondulado II,,704€,41x33 cm,1353,,3,Óleo sobre lienzo.,,no,,si
+d10,Campo electromagnético disuelto I,,768€,40x30 cm,1200,,6,Óleo sobre papel lienzo.,,no,,si
+d11,Campo electromagnético ondulado III,,758€,41x33 cm,1353,,4,Óleo sobre lienzo.,,no,,si
+d12,Campo electromagnético disuelto II,,768€,40x30,1200,,6,Óleo sobre papel lienzo.,,no,,si

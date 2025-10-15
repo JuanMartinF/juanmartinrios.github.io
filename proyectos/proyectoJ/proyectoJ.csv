@@ -1,0 +1,14 @@
+Codigo,Nombre,Coleccion ,Precio,Dimensiones,area (cm^2),Categoria,Valoración,Valoración personal,descripcion,Formato,Existing_html,Venta
+j01,Hipocampo I,no,932€,32x52 cm,1664,,4,,Óleo sobre papel lienzo. Enmarcado.,,sí,no
+j02,Hipocampo II,no,932€,32x52 cm,1664,,4,,Óleo sobre papel lienzo. Enmarcado.,,no,no
+j03,Composición con desglose,no,1.803€,46x70 cm,3220,,4,,Óleo sobre papel lienzo. Enmarcado.,,no,si
+j04,Oleaje I,no,595€,40x31 cm,1240,,2,,Óleo sobre papel lienzo.,,no,si
+j05,Oleaje II,no,595€,40x31 cm,1240,,2,,Óleo sobre papel lienzo.,,no,si
+j06,Oleaje III,no,595€,40x31 cm,1240,,2,,Óleo sobre papel lienzo.,,no,si
+j07,Oleaje IV,no,595€,40x31 cm,1240,,2,,Óleo sobre papel lienzo.,,no,si
+j08,Cónclave,no,910€,50x35 cm,1750,,3,,Mezcla de tinta y acuarela sobre papel.,,no,si
+j09,Costa da Morte,no,910€,50x35 cm,1750,,3,,Mezcla de tinta y acuarela sobre papel.,,no,no
+j10,Sin título,no,348€,36x22 cm,792,,1,,Tinta y collage.,,no,si
+j11,Estudios I,sí,5.712€,102x100 cm,10200,,4,,Composición de óleo sobre cartón.,,no,si
+j12,Estudios II,sí,5.712€,102x100 cm,10200,,4,,Composición de óleo sobre cartón.,,no,si
+j13,Semilla marina,no,4.742€,116x73 cm,8468,,4,,Óleo sobre lienzo.,,no,si

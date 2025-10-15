@@ -158,7 +158,7 @@ html_template2 = """<!DOCTYPE html>
 """
 
 
-proyectos = ["proyectoZ"]
+proyectos = ["proyectoA", "ProyectoB", "ProyectoC", "proyectoD", "proyectoF","proyectoG", "ProyectoH", "proyectoJ"]
 
 
 for proj in proyectos:

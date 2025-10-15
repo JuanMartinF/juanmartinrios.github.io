@@ -5,25 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Oleaje II - Juan Martín Ríos</title>
   <link rel="stylesheet" href="../../../style.css">
+  <link rel="icon" href="../../../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../../../favicon.png">
   <style>
     .cuadro-detalle {
       max-width: 900px;
       margin: 2rem auto;
       text-align: center;
     }
-
     .cuadro-detalle img {
       max-width: 100%;
       height: auto;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
-
     .info-cuadro {
       margin-top: 1rem;
       font-size: 1.1rem;
     }
-
     .descripcion-cuadro {
       margin-top: 2rem;
       text-align: justify;
@@ -32,41 +31,20 @@
   </style>
 </head>
 
-
 <body>
-
-
-
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.querySelector(".menu-toggle");
-    const nav = document.querySelector("nav");
-
-    toggle.addEventListener("click", () => {
-      nav.classList.toggle("active");
-    });
-  });
-</script>
-
-
   <header>
     <div id="volver-atras" class="volver-atras">
       <button onclick="history.back()" aria-label="Volver atrás">←</button>
     </div>
-    
     <script>
-      // Si el historial es menor o igual a 1, ocultamos el botón
       if (window.history.length <= 1) {
         document.getElementById("volver-atras").style.display = "none";
       }
     </script>
 
-<h1><a href="../../../index.html" class="titulo-link">Galería de Juan Martín Ríos</a></h1>
+    <h1><a href="../../../index.html" class="titulo-link">Galería de Juan Martín Ríos</a></h1>
 
-  <!-- Botón hamburguesa (solo visible en móvil) -->
-  <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
-    
+    <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
     <nav>
       <a href="../../../index.html">Inicio</a>
       <a href="../../../sobre.html">Sobre mí</a>
@@ -76,36 +54,23 @@
     </nav>
   </header>
 
-
-
   <main class="cuadro-detalle">
     <img src="../../../proyectos/proyectoJ/pics/j05_web.jpg" alt="Oleaje II">
-
     <div class="info-cuadro">
       <p><strong>Título:</strong> Oleaje II</p>
       <p><strong>Precio:</strong> 595€</p>
       <p><strong>Dimensiones:</strong> 40x31 cm</p>
       <p><strong>Código:</strong> j05</p>
     </div>
-
-    <div class="descripcion-cuadro">
-      <p>Óleo sobre papel lienzo.</p>
-    </div>
+    <div class="descripcion-cuadro">Óleo sobre papel lienzo.</div>
   </main>
 
-<!-- cargar footer -->
-
-<script>
-  fetch("../../../footer.html") // Ruta absoluta (ajústala si usas subcarpeta en GitHub Pages)
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("footer").innerHTML = data;
-    })
-    .catch(err => console.error("Error al cargar el footer:", err));
-</script>
-
-<div id="footer"></div>
-  
-
+  <div id="footer"></div>
+  <script>
+    fetch("../../../footer.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("footer").innerHTML = data)
+      .catch(err => console.error("Error al cargar el footer:", err));
+  </script>
 </body>
 </html>

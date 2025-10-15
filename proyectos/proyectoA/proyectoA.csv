@@ -1,4 +1,4 @@
-Codigo,Nombre,Coleccion ,Precio,Dimensiones,area (cm^2),Categoria,Valoración personal,descripcion,Formato,Existing_html,Ready,
+Codigo,Nombre,Coleccion ,Precio,Dimensiones,area (cm^2),Categoria,Valoración personal,descripcion,Formato,Existing_html,Ready,Venta
 a000,,,0€,40x50,,A,,,,sí,no,
 a001,La ciudad sumergida en su reflejo I,no,1.352€,65x40 cm,2600,B,3,Óleo sobre cartón.,,no,no,
 a002,La ciudad sumergida en su reflejo II,no,2.366€,65x65 cm,4225,B,4,Óleo sobre papel lienzo.,,no,no,
@@ -7,9 +7,9 @@ a004,Composición descorchándose,sí,458€,2 de 20x22 cm,880,B,3,Óleo sobre p
 a005,Paisaje húmedo,no,192€,21x19 cm,399,B,2,Óleo sobre papel lienzo.,,no,,
 a006,Ocho estudios de paisaje,sí,936€,4 de 30x15 cm,1800,B,3,Óleo sobre papel lienzo.,,no,,
 a007,Refracción I,no,588€,35x35 cm,1225,A,2,Óleo sobre lienzo.,,no,,
-a008,Congregación,no,248€,17x28 cm,476,A,3,Óleo sobre lienzo.,,no,,No está en venta
+a008,Congregación,no,248€,17x28 cm,476,A,3,Óleo sobre lienzo.,,no,,no
 a009,Decorativo I,no,686€,35x35 cm,1225,A,4,Óleo sobre lienzo.,,no,,
-a010,Paisaje 'originante',no,116€,13x16 cm,208,A,4,Óleo sobre lienzo.,,no,,No está en venta
+a010,Paisaje 'originante',no,116€,13x16 cm,208,A,4,Óleo sobre lienzo.,,no,,no
 a011,Triteselado vertical,sí,416€,3 de 17x17 cm,867,A,2,Óleo sobre lienzo.,,no,,
 a012,Sin Título,pueden ir a012 y a013,176€,20x20 cm,400,A,1,Óleo sobre lienzo.,,no,,
 a013,Sin Título,pueden ir a012 y a013,176€,20x20 cm,400,A,1,Óleo sobre lienzo.,,no,,
@@ -62,7 +62,7 @@ a059,Trama columnada,no,350€,27x27 cm,729,A,2,Óleo sobre lienzo.,,no,yo,
 a060,Paisaje vivo,no,1.756€,56x56 cm,3136,A,4,Óleo sobre lienzo. Con bastidor.,Incluye bastidor,no,,
 a061,Cuatro estructuras a replicar,no,492€,32x32 cm,1024,B,2,Óleo sobre papel lienzo.,,no,,
 a062,Sin Título,sí,1.248€,6 de 20x20 cm,2400,B,3,Óleo sobre papel lienzo.,,no,,
-a063,Sin Título,no,9.175€,128x128 cm,16384,A,4,Óleo sobre lienzo. Con bastidor.,Incluye bastidor,no,yo,
+a063,Tetrakis,no,9.175€,128x128 cm,16384,A,4,Óleo sobre lienzo. Con bastidor.,Incluye bastidor,no,yo,
 a064,Paisaje nocturno,no,532€,32x32 cm,1024,A,3,Óleo sobre lienzo. Con bastidor.,Incluye bastidor,no,,
 a065,Paisaje flotante,no,1.198€,48x48 cm,2304,A,3,Óleo sobre lienzo. Con bastidor.,Incluye bastidor,no,yo,
 a066,Refracción V,no,2.488€,72x72 cm,5184,A,2,Óleo sobre lienzo. Con bastidor.,Incluye bastidor,no,,
