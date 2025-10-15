@@ -2,8 +2,8 @@
 User-agent: *
 Allow: /
 
-Disallow: gracias.html
-Disallow: indexador_direcciones.py
+Disallow: /gracias.html
+Disallow: /indexador_direcciones.py
 Disallow: /fotos/espacio1.jpg
 Disallow: /fotos/espacio2.jpg
 Disallow: /fotos/espacio3.jpg
@@ -13,23 +13,20 @@ Disallow: /fotos/espacio6.jpg
 Disallow: /fotos/espacio7.jpg
 Disallow: /fotos/estudio1.jpg
 Disallow: /fotos/estudio2.jpg
-Disallow: /proyectoA/pics/
-Disallow: /ProyectoB/pics/
-Disallow: /ProyectoC/pics/
-Disallow: /proyectoD/pics/
-Disallow: /proyectoE/pics/
-Disallow: /proyectoF/pics/
-Disallow: /proyectoG/pics/
-Disallow: /ProyectoH/pics/
-Disallow: /proyectoI/pics/
-Disallow: /proyectoJ/pics/
-Disallow: direcciones.html
-Disallow: footer.html
-Disallow: galeria.html
+Disallow: /direcciones.html
+Disallow: /footer.html
+Disallow: /galeria.html
 Disallow: indexador_direcciones.py
 Disallow: /proyectos/proyectoA/pics/
-Disallow: /proyectos/proyectoB/pics/
+Disallow: /proyectos/ProyectoB/pics/
 Disallow: /proyectos/proyectoC/pics/
+Disallow: /proyectos/ProyectoC/pics/
+Disallow: /proyectos/proyectoD/pics/
+Disallow: /proyectos/proyectoF/pics/
+Disallow: /proyectos/proyectoG/pics/
+Disallow: /proyectos/ProyectoH/pics/
+Disallow: /proyectos/proyectoJ/pics/
+
 Disallow: /*.py$
 Disallow: /*.csv$
 
