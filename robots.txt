@@ -16,7 +16,6 @@ Disallow: /fotos/estudio2.jpg
 Disallow: /direcciones.html
 Disallow: /footer.html
 Disallow: /galeria.html
-Disallow: indexador_direcciones.py
 Disallow: /proyectos/proyectoA/pics/
 Disallow: /proyectos/ProyectoB/pics/
 Disallow: /proyectos/proyectoC/pics/
