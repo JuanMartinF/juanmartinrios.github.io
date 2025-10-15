@@ -1,5 +1,5 @@
 Codigo,Nombre,Coleccion ,Precio,Dimensiones,area (cm^2),Categoria,Valoración personal,descripcion,Formato,Existing_html,Ready,Venta
-c01,Temurados,sí,7.280€,2 de 100x65 cm,13000,A,4,Óleo sobre lienzo.,Con bastidor.,si,,
+c01,Temurados,sí,7.280€,2 de 100x65 cm,13000,A,4,Óleo sobre lienzo.,Con bastidor.,no,,
 c02,El cónsul,no,4.403€,116x73 cm,8468,A,3,Óleo sobre lienzo. Enmarcado.,,no,,
 c03,Vista subacuática del volcán,no,7.277€,146x89 cm,12994,A,4,Óleo sobre lienzo,,no,,
 c04,Esquema convergente sobre fondo de volcanes,no,6.757€,146x89 cm,12994,A,3,Óleo sobre lienzo.,Con bastidor.,no,,

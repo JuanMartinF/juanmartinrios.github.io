@@ -1,5 +1,5 @@
 Codigo,Nombre,Coleccion ,Precio,Dimensiones,area (cm^2),Categoria,Valoración personal,descripcion,Formato,Existing_html,Ready,Venta
-h01,Rastro 1,sí,No está en venta.,4 de 20x25 cm.,2000,,,Óleo sobre lienzo. Enmarcado.,,sí,,no
+h01,Rastro 1,sí,No está en venta.,4 de 20x25 cm.,2000,,,Óleo sobre lienzo. Enmarcado.,,no,,no
 h02,Rastro 2,sí,No está en venta.,4 de 29x19 cm.,2204,,,Óleo sobre lienzo. Enmarcado.,,no,,no
 h03,Rastro 3,sí,No está en venta.,4 de 21x21 cm.,1764,,,Óleo sobre lienzo. Enmarcado.,,no,,no
 h04,Rastro 4,no,No está en venta.,84x42 cm.,3528,,,Óleo sobre lienzo. Enmarcado.,,no,,no

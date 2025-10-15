@@ -1,5 +1,5 @@
 Codigo,Nombre,Coleccion ,Precio,Dimensiones,area (cm^2),Categoria,Valoración personal,descripcion,Formato,Existing_html,Ready,Venta
-g01,Up,no,14.941€,184x145 cm,26680,,4,Óleo sobre lienzo.,,sí,,si
+g01,Up,no,14.941€,184x145 cm,26680,,4,Óleo sobre lienzo.,,no,,si
 g02,Ave,sí,3.120€,2 de 50x65 cm,6500,,2,Óleo sobre papel lienzo.,,no,,si
 g03,Sin título,no,2.747€,101x68 cm ,6868,,0,Óleo sobre madera.,,no,,si
 g04,Sin título,no,449€,39x24 cm,936,,2,Óleo sobre papel lienzo.,,no,,si
