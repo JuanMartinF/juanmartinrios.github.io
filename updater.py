@@ -137,7 +137,7 @@ html_template2 = """<!DOCTYPE html>
   </header>
 
   <main class="cuadro-detalle">
-    <img src="../../../proyectos/{proj}/pics/{codigo}_web.jpg" alt="{titulo}">
+    <img src="../../../proyectos/{proj}/pics/{codigo}_web.jpg" alt="{titulo}" ondragstart="return false;" oncontextmenu="return false;">
     <div class="info-cuadro">
       <p><strong>Título:</strong> {titulo}</p>
       <p><strong>Dimensiones:</strong> {dimensiones}</p>
