@@ -1,5 +1,5 @@
 Codigo,Nombre,Coleccion ,Precio,Dimensiones,area (cm^2),Categoria,Valoración personal,descripcion,Formato,Existing_html,Ready,Venta
-b01,Vórtice 1,no,4.390€,70x112 cm,7840,,4,Óleo sobre lienzo.,Con bastidor.,si,,si
+b01,Vórtice 1,no,4.390€,70x112 cm,7840,,4,Óleo sobre lienzo.,Con bastidor.,no,,si
 b02,Vórtice 2,no,4.390€,70x112 cm,7840,,4,Óleo sobre lienzo.,Con bastidor.,no,,si
 b03,Vórtice 3,no,4.390€,70x112 cm,7840,,4,Óleo sobre lienzo.,Con bastidor.,no,,si
 b04,Vórtice 4,no,862€,35x56 cm,1960,,1,Óleo sobre lienzo.,Con bastidor.,no,,si
