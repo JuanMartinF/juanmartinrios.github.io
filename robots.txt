@@ -1,6 +1,8 @@
 
 User-agent: *
 Allow: /
+Allow: /index.html
+Allow: /sobre.html
 
 Disallow: /gracias.html
 Disallow: /indexador_direcciones.py
