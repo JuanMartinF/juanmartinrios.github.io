@@ -7,7 +7,7 @@ df = pd.read_csv("proyectos/proyectoC/catalogo_de_cuadrosC.csv")
 template = """
 <div class="card">
   <a href="../../../proyectos/ProyectoC/html/{codigo}.html">
-    <img src="../../../proyectos/ProyectoC/pics/{codigo}_web.jpg" alt="{nombre}">
+    <img src="../../../proyectos/ProyectoC/pics/{codigo}_web.jpg" alt="{nombre}" ondragstart="return false;" oncontextmenu="return false;">
     <p class="title">{nombre}</p>
   </a>
 </div>
