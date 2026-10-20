@@ -2,126 +2,30 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" Cache-Control: max-age=3153600>
-  
-  <title>Juan Martín Ríos - Inicio</title>
-  <meta name="description" content="Galería online de Juan Martín Ríos.">
-  <meta name="keywords" content="arte, pintura, cuadros, galería, online, abstracto, geometría, juan martin rios">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Juan Martín Ríos — Pintura</title>
+  <meta name="description" content="Galería online del pintor Juan Martín Ríos. Teselaciones, vórtices y campos electromagnéticos: la física y las matemáticas convertidas en pintura.">
+  <meta name="keywords" content="arte, pintura, cuadros, galería, online, abstracto, geometría, electromagnetismo, teselación, juan martin rios">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="favicon.png">
-  
-
-  <style>
-/* Menú principal (negro) */
-.navbar {
-  background-color: #000;
-  color: #fff;
-  padding: 10px;
-}
-
-/* Botón dentro del menú */
-.navbar button {
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-/* Secciones colapsables tipo Wikipedia */
-.collapsible {
-  background-color: #fafafa; /* gris claro */
-  color: #333;
-  cursor: pointer;
-  padding: 10px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition: background-color 0.3s ease;
-}
-
-.collapsible:hover {
-  background-color: #ddd;
-}
-
-.collapsible .arrow {
-  transition: transform 0.3s ease;
-  font-size: 14px;
-}
-
-.collapsible.active .arrow {
-  transform: rotate(90deg);
-}
-
-.content {
-  padding: 0 15px;
-  display: none;
-  overflow: hidden;
-  background-color: #fff;
-  border-left: 3px solid #ccc;
-  margin-bottom: 10px;
-}
-
-
-.slider {
-    position: relative;
-    width: 60%;
-    height: 420px;
-    overflow: hidden;
-  }
-
-
-  .slider img {
-    width: 100%;
-    height: 420px;
-   /* object-fit: cover;*/
-   object-fit: contain;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    opacity: 0;
-    transition: all 1s ease-in-out;
-  }
-
-  .slider img.active {
-    left: 0;
-    opacity: 1;
-  }
-
-  </style>
-
 </head>
 
-
 <body>
-  
+
 <header>
+  <h1><a href="index.html" class="titulo-link">Juan Martín Ríos</a></h1>
 
-  <!-- script burger menu-->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggle = document.querySelector(".menu-toggle");
-      const nav = document.querySelector("nav");
-  
-      toggle.addEventListener("click", () => {
-        nav.classList.toggle("active");
-      });
-    });
-  </script>
-
-  <h1>Galería de Juan Martín Ríos</h1>
-
-  <!-- Botón hamburguesa (solo visible en móvil) -->
-  <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+  <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">&#9776;</button>
 
   <nav>
-    <a href="index.html">Inicio</a>
+    <a href="index.html" aria-current="page">Inicio</a>
     <a href="sobre.html">Sobre mí</a>
     <a href="proyectos.html">Proyectos</a>
     <a href="comprar.html">Comprar</a>
@@ -129,130 +33,234 @@
   </nav>
 </header>
 
+<!-- ==================== EL CAMPO ==================== -->
 
-  <main>
+<section class="hero">
+  <canvas id="campo" aria-hidden="true"></canvas>
 
+  <div class="hero-interior">
+    <p class="kicker">Pintura · Física · Matemáticas</p>
 
-    
-    <h2>Bienvenidos</h2>
-    <p style="text-align:center; max-width:700px; margin:auto; margin-bottom:2rem;">
-      Te doy la bienvenida a mi galería online, donde puedes explorar algunas de mis obras.
+    <h2 class="hero-titulo">Juan Martín <em>Ríos</em></h2>
+
+    <p class="hero-sub">
+      Óleos que indagan la estructura íntima del espacio: teselaciones,
+      vórtices y campos electromagnéticos. La teoría de grupos y la
+      mecánica cuántica, convertidas en pintura.
     </p>
-  </main>
 
-      <div class="slider" data-slider>
-        <a href="proyectos/proyectoA/html/a003.html" >
-        <img src="proyectos/proyectoA/pics/a003_web.jpg" class="active" alt="Paisaje cristalino" ondragstart="return false;" oncontextmenu="return false;"></a>
+    <div class="hero-acciones">
+      <a class="btn" href="proyectos.html">Explorar la obra</a>
+      <a class="btn" href="sobre.html">El artista</a>
+    </div>
 
-        <a href="proyectos/ProyectoB/html/b14.html">
-          <img src="proyectos/ProyectoB/pics/b14_web.jpg" alt="Vórtice 14" ondragstart="return false;" oncontextmenu="return false;"></a>  
-        
-        <a href="proyectos/ProyectoC/html/c02.html">
-          <img src="proyectos/ProyectoC/pics/c02_web.jpg" alt="El cónsul" ondragstart="return false;" oncontextmenu="return false;"></a>  
+    <figure class="hero-obra">
+      <img src="proyectos/ProyectoB/pics/b14_web.jpg" alt="Vórtice 14 — óleo sobre lienzo" ondragstart="return false;" oncontextmenu="return false;">
+      <figcaption>b14 · Vórtice 14 · Óleo sobre lienzo</figcaption>
+    </figure>
+  </div>
 
+  <div class="hero-pie">
+    <span>Granada — Estudio del pintor</span>
+    <span>Catálogo en digitalización</span>
+    <span><span class="flecha-abajo">↓</span> Desplázate</span>
+  </div>
+</section>
+
+<main>
+
+  <!-- ==================== OBRAS SELECCIONADAS ==================== -->
+
+  <section class="seccion" id="obras">
+    <div class="seccion-cabecera reveal">
+      <span class="indice">01</span>
+      <h2>Obras seleccionadas</h2>
+      <span class="nota">Óleo · Tinta · Collage</span>
+    </div>
+
+    <div class="obras-grid">
+
+      <figure class="obra reveal">
+        <a href="proyectos/proyectoA/html/a003.html">
+          <div class="marco">
+            <img src="proyectos/proyectoA/pics/a003_web.jpg" alt="Paisaje cristalino" loading="lazy" ondragstart="return false;" oncontextmenu="return false;">
+          </div>
+          <figcaption class="etiqueta">
+            <span class="codigo">a003</span>
+            <span class="titulo-obra">Paisaje cristalino</span>
+            <span class="ficha">Óleo sobre papel lienzo · 4 de 40×40 cm</span>
+          </figcaption>
+        </a>
+      </figure>
+
+      <figure class="obra reveal" style="--d:.08s">
         <a href="proyectos/proyectoD/html/d12.html">
-          <img src="proyectos/proyectoD/pics/d12_web.jpg" alt="Campo electromagnético disuelto" ondragstart="return false;" oncontextmenu="return false;"></a>  
-      
-        <a href="proyectos/proyectoF/html/f06.html">
-          <img src="proyectos/proyectoF/pics/f06_web.jpg" alt="¿Buscan la luna?" ondragstart="return false;" oncontextmenu="return false;"></a>  
-  
-        <a href="proyectos/proyectoG/html/g01.html">
-          <img src="proyectos/proyectoG/pics/g01_web.jpg" alt="Up" ondragstart="return false;" oncontextmenu="return false;"></a>  
-  
+          <div class="marco">
+            <img src="proyectos/proyectoD/pics/d12_web.jpg" alt="Campo electromagnético disuelto II" loading="lazy" ondragstart="return false;" oncontextmenu="return false;">
+          </div>
+          <figcaption class="etiqueta">
+            <span class="codigo">d12</span>
+            <span class="titulo-obra">Campo electromagnético disuelto II</span>
+            <span class="ficha">Óleo sobre papel lienzo · 40×30 cm</span>
+          </figcaption>
+        </a>
+      </figure>
+
+      <figure class="obra reveal">
+        <a href="proyectos/ProyectoC/html/c02.html">
+          <div class="marco">
+            <img src="proyectos/ProyectoC/pics/c02_web.jpg" alt="El cónsul" loading="lazy" ondragstart="return false;" oncontextmenu="return false;">
+          </div>
+          <figcaption class="etiqueta">
+            <span class="codigo">c02</span>
+            <span class="titulo-obra">El cónsul</span>
+            <span class="ficha">Óleo sobre lienzo · 116×73 cm</span>
+          </figcaption>
+        </a>
+      </figure>
+
+      <figure class="obra reveal" style="--d:.08s">
         <a href="proyectos/proyectoJ/html/j09.html">
-          <img src="proyectos/proyectoJ/pics/j09_web.jpg" alt="Costa da Morte" ondragstart="return false;" oncontextmenu="return false;"></a>  
-  
-        <a href="proyectos/proyectoA/html/a067.html">
-          <img src="proyectos/proyectoA/pics/a067_web.jpg" alt="Sin título" ondragstart="return false;" oncontextmenu="return false;"></a>
-  
-          <a href="proyectos/ProyectoB/html/b16.html">
-            <img src="proyectos/ProyectoB/pics/b16_web.jpg" alt="Fusión hacia lo profundo" ondragstart="return false;" oncontextmenu="return false;"></a>  
-          
-          <a href="proyectos/ProyectoC/html/c20.html">
-            <img src="proyectos/ProyectoC/pics/c20_web.jpg" alt="Luminaria" ondragstart="return false;" oncontextmenu="return false;"></a>  
-  
-          <a href="proyectos/proyectoD/html/d11.html">
-            <img src="proyectos/proyectoD/pics/d11_web.jpg" alt="Campo electromagnético ondulado" ondragstart="return false;" oncontextmenu="return false;"></a>  
-        
-          <a href="proyectos/proyectoF/html/f07.html">
-            <img src="proyectos/proyectoF/pics/f07_web.jpg" alt="Testa" ondragstart="return false;" oncontextmenu="return false;"></a>  
-    
-          <a href="proyectos/proyectoG/html/g08.html">
-            <img src="proyectos/proyectoG/pics/g08_web.jpg" alt="Homenaje a Rothko" ondragstart="return false;" oncontextmenu="return false;"></a>  
-    
-          <a href="proyectos/proyectoJ/html/j11.html">
-            <img src="proyectos/proyectoJ/pics/j11_web.jpg" alt="Estudios I" ondragstart="return false;" oncontextmenu="return false;"></a>  
+          <div class="marco">
+            <img src="proyectos/proyectoJ/pics/j09_web.jpg" alt="Costa da Morte" loading="lazy" ondragstart="return false;" oncontextmenu="return false;">
+          </div>
+          <figcaption class="etiqueta">
+            <span class="codigo">j09</span>
+            <span class="titulo-obra">Costa da Morte</span>
+            <span class="ficha">Tinta y acuarela sobre papel · 50×35 cm</span>
+          </figcaption>
+        </a>
+      </figure>
 
-      </div>
-  
-  
+      <figure class="obra reveal">
+        <a href="proyectos/proyectoG/html/g08.html">
+          <div class="marco">
+            <img src="proyectos/proyectoG/pics/g08_web.jpg" alt="Homenaje a Rothko" loading="lazy" ondragstart="return false;" oncontextmenu="return false;">
+          </div>
+          <figcaption class="etiqueta">
+            <span class="codigo">g08</span>
+            <span class="titulo-obra">Homenaje a Rothko</span>
+            <span class="ficha">Óleo y collage sobre cartón · 65×50 cm</span>
+          </figcaption>
+        </a>
+      </figure>
 
+      <figure class="obra reveal" style="--d:.08s">
+        <a href="proyectos/ProyectoB/html/b16.html">
+          <div class="marco">
+            <img src="proyectos/ProyectoB/pics/b16_web.jpg" alt="Fusión hacia lo profundo" loading="lazy" ondragstart="return false;" oncontextmenu="return false;">
+          </div>
+          <figcaption class="etiqueta">
+            <span class="codigo">b16</span>
+            <span class="titulo-obra">Fusión hacia lo profundo</span>
+            <span class="ficha">Óleo sobre lienzo · 4 de 50×81 cm</span>
+          </figcaption>
+        </a>
+      </figure>
 
+    </div>
+  </section>
 
+  <!-- ==================== CITA ==================== -->
 
+  <section class="cita reveal">
+    <div class="rombo">◆ ◆ ◆</div>
+    <blockquote>
+      «Las matemáticas son la llave abstracta que abre la cerradura del mundo físico.»
+    </blockquote>
+    <cite>John Polkinghorne — citado en “El Paisaje de la Llave”</cite>
+  </section>
 
-  <script>
-    // Script para sliders de cada tarjeta
-    document.querySelectorAll("[data-slider]").forEach(slider => {
-      const images = slider.querySelectorAll("img");
-      let index = 0;
-      setInterval(() => {
-        images[index].classList.remove("active");
-        index = (index + 1) % images.length;
-        images[index].classList.add("active");
-      }, 2500); // cambia cada 2s
-    });
-  </script>
-  
-  <script>
-  // Load footer 
-  fetch('footer.html') 
-      .then(response => response.text()) 
-      .then(data => { 
-          document.getElementById('footer').innerHTML = data; 
-      }); 
-</script>
+  <!-- ==================== ÍNDICE DE PROYECTOS ==================== -->
 
-<!-- cargar footer -->
+  <section class="seccion" id="proyectos">
+    <div class="seccion-cabecera reveal">
+      <span class="indice">02</span>
+      <h2>Proyectos</h2>
+      <span class="nota">1988 — actualidad</span>
+    </div>
+
+    <div class="indice-proyectos reveal">
+      <a class="fila-proyecto" href="proyectos/proyectoA/html/proyectoA.html" data-img="proyectos/proyectoA/pics/a054_web.jpg">
+        <span class="letra">A</span>
+        <span class="nombre">El Paisaje de la Llave</span>
+        <span class="meta">El acordenroscado · 73 obras</span>
+        <span class="flecha">→</span>
+      </a>
+      <a class="fila-proyecto" href="proyectos/ProyectoB/html/proyectoB.html" data-img="proyectos/ProyectoB/pics/b01_web.jpg">
+        <span class="letra">B</span>
+        <span class="nombre">Vórtices entrelazados</span>
+        <span class="meta">Espirales puntillistas · 15 obras</span>
+        <span class="flecha">→</span>
+      </a>
+      <a class="fila-proyecto" href="proyectos/ProyectoC/html/proyectoC.html" data-img="proyectos/ProyectoC/pics/c08_web.jpg">
+        <span class="letra">C</span>
+        <span class="nombre">Sobre el volcán</span>
+        <span class="meta">Rostros del umbral · 30 obras</span>
+        <span class="flecha">→</span>
+      </a>
+      <a class="fila-proyecto" href="proyectos/proyectoD/html/proyectoD.html" data-img="proyectos/proyectoD/pics/d10_web.jpg">
+        <span class="letra">D</span>
+        <span class="nombre">Serie electromagnética</span>
+        <span class="meta">Campos y ondas · 11 obras</span>
+        <span class="flecha">→</span>
+      </a>
+      <a class="fila-proyecto" href="proyectos/ProyectoH/html/proyectoH.html" data-img="proyectos/ProyectoH/pics/h02_web.jpg">
+        <span class="letra">H</span>
+        <span class="nombre">Rastros</span>
+        <span class="meta">Tramas en negro · 7 obras</span>
+        <span class="flecha">→</span>
+      </a>
+      <a class="fila-proyecto" href="proyectos/proyectoJ/html/proyectoJ.html" data-img="proyectos/proyectoJ/pics/j07_web.jpg">
+        <span class="letra">J</span>
+        <span class="nombre">Olas y ondulaciones</span>
+        <span class="meta">Tinta y acuarela · 12 obras</span>
+        <span class="flecha">→</span>
+      </a>
+      <a class="fila-proyecto" href="proyectos/proyectoF/html/proyectoF.html" data-img="proyectos/proyectoF/pics/f02_web.jpg">
+        <span class="letra">F</span>
+        <span class="nombre">Cuadros antiguos</span>
+        <span class="meta">La figuración primera · 9 obras</span>
+        <span class="flecha">→</span>
+      </a>
+      <a class="fila-proyecto" href="proyectos/proyectoG/html/proyectoG.html" data-img="proyectos/proyectoG/pics/g01_web.jpg">
+        <span class="letra">G</span>
+        <span class="nombre">Obras independientes</span>
+        <span class="meta">Piezas sueltas · 8 obras</span>
+        <span class="flecha">→</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ==================== PIE ==================== -->
 
 <footer>
-  <p>
-    &copy; 2025 Juan Martín Ríos. Todos los derechos reservados. Queda prohibida la reproducción o el uso de las imágenes sin autorización expresa del autor.
-  </p>
-    <p>
-    <a href="contacto.html">Contacto</a> | 
-    <a href="mailto:juanmartin.faj@gmail.com" class="social-link">
-      <svg xmlns="http://www.w3.org/2000/svg" 
-           width="16" height="16" viewBox="0 0 24 24" 
-           fill="currentColor" style="vertical-align: middle; margin-right:4px;">
-        <path d="M20 4H4c-1.103 0-2 .897-2 
-                 2v12c0 1.103.897 2 2 
-                 2h16c1.103 0 2-.897 
-                 2-2V6c0-1.103-.897-2-2-2zm0 
-                 2v.511l-8 5.333-8-5.333V6h16zM4 
-                 18V8.489l8 5.333 8-5.333V18H4z"/>
-      </svg>
-      juanmartin.faj@gmail.com
-    </a> | 
-    <a href="https://www.instagram.com/juanmartinrios.art" target="_blank" class="social-link">
-      <svg xmlns="http://www.w3.org/2000/svg" 
-           width="16" height="16" viewBox="0 0 24 24" 
-           fill="currentColor" style="vertical-align: middle; margin-right:4px;">
-        <path d="M7 2C4.243 2 2 4.243 2 7v10c0 
-                 2.757 2.243 5 5 5h10c2.757 0 
-                 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 
-                 2h10c1.654 0 3 1.346 3 3v10c0 
-                 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 
-                 1.346-3 3-3zm5 2a5 5 0 100 10 5 5 0 
-                 000-10zm0 2a3 3 0 110 6 3 3 0 
-                 010-6zm4.5-.5a1.5 1.5 0 11-3 0 
-                 1.5 1.5 0 013 0z"/>
-      </svg>
-      Instagram
-    </a>
-  </p>
+  <div class="footer-interior">
+    <div class="footer-marca">Juan Martín <em>Ríos</em></div>
+    <div class="footer-enlaces">
+      <a href="contacto.html">Contacto</a>
+      <a href="mailto:juanmartin.faj@gmail.com" class="social-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 5.333-8-5.333V6h16zM4 18V8.489l8 5.333 8-5.333V18H4z"/>
+        </svg>
+        juanmartin.faj@gmail.com
+      </a>
+      <a href="https://www.instagram.com/juanmartinrios.art" target="_blank" rel="noopener" class="social-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3zm5 2a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+        </svg>
+        Instagram
+      </a>
+    </div>
+  </div>
+  <div class="footer-legal">
+    <p>&copy; 2026 Juan Martín Ríos. Todos los derechos reservados. Queda prohibida la reproducción o el uso de las imágenes sin autorización expresa del autor.</p>
+  </div>
 </footer>
 
+<script src="campo.js" defer></script>
 
 </body>
 </html>

@@ -2,402 +2,309 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" Cache-Control: max-age=3153600>
-  <title>Juan Martín Ríos - Sobre mí </title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Sobre mí — Juan Martín Ríos</title>
+  <meta name="description" content="Juan Martín Ríos, pintor granadino (1964). Bellas Artes por Sevilla, 1988. La física y las matemáticas integradas en la pintura.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="favicon.png">
-  
-
-  <style>
-/* Menú principal (negro) */
-.navbar {
-  background-color: #000;
-  color: #fff;
-  padding: 10px;
-}
-
-/* Botón dentro del menú */
-.navbar button {
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-/* Secciones colapsables tipo Wikipedia */
-.collapsible {
-  background-color: #fafafa; /* gris claro */
-  color: #333;
-  cursor: pointer;
-  padding: 10px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition: background-color 0.3s ease;
-}
-
-.collapsible:hover {
-  background-color: #ddd;
-}
-
-.collapsible .arrow {
-  transition: transform 0.3s ease;
-  font-size: 14px;
-}
-
-.collapsible.active .arrow {
-  transform: rotate(90deg);
-}
-
-.content {
-  padding: 0 15px;
-  display: none;
-  overflow: hidden;
-  background-color: #fff;
-  border-left: 3px solid #ccc;
-  margin-bottom: 10px;
-}
-
-
-.slider {
-    position: relative;
-    width: 60%;
-    height: 420px;
-    overflow: hidden;
-  }
-
-
-  .slider img {
-    width: 100%;
-    height: 420px;
-   /* object-fit: cover;*/
-   object-fit: contain;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    opacity: 0;
-    transition: all 1s ease-in-out;
-  }
-
-  .slider img.active {
-    left: 0;
-    opacity: 1;
-  }
-
-  </style>
-
 </head>
-
-
-
 
 <body>
 
 <header>
+  <h1><a href="index.html" class="titulo-link">Juan Martín Ríos</a></h1>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggle = document.querySelector(".menu-toggle");
-      const nav = document.querySelector("nav");
-  
-      toggle.addEventListener("click", () => {
-        nav.classList.toggle("active");
-      });
-    });
-  </script>  
-
-  <h1><a href="index.html" class="titulo-link">Galería de Juan Martín Ríos:</a> Sobre mí</h1>
-
-  <!-- Botón hamburguesa (solo visible en móvil) -->
-  <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+  <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">&#9776;</button>
 
   <nav>
     <a href="index.html">Inicio</a>
-    <a href="sobre.html">Sobre mí</a>
+    <a href="sobre.html" aria-current="page">Sobre mí</a>
     <a href="proyectos.html">Proyectos</a>
     <a href="comprar.html">Comprar</a>
     <a href="contacto.html">Contacto</a>
   </nav>
-
 </header>
 
-  <main>
+<main>
 
-    <div id="volver-atras" class="volver-atras">
-      <button onclick="history.back()" aria-label="Volver atrás">←</button>
+  <div id="volver-atras" class="volver-atras">
+    <button onclick="history.back()" aria-label="Volver atrás">←</button>
+  </div>
+
+  <div class="portada-pagina reveal">
+    <p class="kicker">El artista</p>
+    <h1>Sobre <em>mí</em></h1>
+    <p class="lede">
+      Me llamo Juan Martín Ríos y nací en Granada en 1964. Me licencié en Bellas
+      Artes en la universidad de Sevilla en 1988. Siempre he tenido un interés
+      especial por la física y las matemáticas. Particularmente por la teoría de
+      grupos, la mecánica cuántica y el electromagnetismo. Mi fascinación por
+      estas áreas me impulsa a buscar la manera de integrarlas en la pintura, y
+      ha llevado mi obra por territorios tan inexplorados que ni siquiera
+      concebía posibles.
+    </p>
+    <div class="datos-bio">
+      <span>Granada, 1964</span>
+      <span>Bellas Artes — Sevilla, 1988</span>
+      <span>Teoría de grupos · Mecánica cuántica · Electromagnetismo</span>
     </div>
-    
-    <script>
-      // Si el historial es menor o igual a 1, ocultamos el botón
-      if (window.history.length <= 1) {
-        document.getElementById("volver-atras").style.display = "none";
-      }
-    </script>
-
-
-
-    <h2>Bienvenidos</h2>
-    <p>Me llamo Juan Martín Ríos y nací en Granada en 1964. Me licencié en Bellas Artes en la universidad de Sevilla en 1988. Siempre he tenido un interés especial por la física y las matemáticas. Particularmente por la teoría de grupos, la mecánica cuántica y el electromagnetismo. Mi fascinación por estas áreas me impulsa a buscar la manera de integrarlas en la pintura, y ha llevado mi obra por territorios tan inexplorados que ni siquiera concebía posibles.</p>
-
-
-
-      <div class="slider" data-slider>
-        <img src="fotos/juan1.jpg" class="active" ondragstart="return false;" oncontextmenu="return false;">
-        <img src="fotos/juan2.jpg" ondragstart="return false;" oncontextmenu="return false;">
-        <img src="fotos/juan3.jpg" ondragstart="return false;" oncontextmenu="return false;">
-        <img src="fotos/juan4.jpg" ondragstart="return false;" oncontextmenu="return false;">
-      </div>
-      <div class="title">
-        <h3 style="text-align: center;">Este soy yo.</h3>
-      </div>
-
-
-
-      <div class="slider" data-slider>
-        <img src="fotos/estudio1.jpg" class="active" ondragstart="return false;" oncontextmenu="return false;">
-        <img src="fotos/estudio2.jpg" ondragstart="return false;" oncontextmenu="return false;">
-      </div>
-      <h3 style="text-align: center;">Este es mi estudio.</h3>
-
-      <div class="slider" data-slider>
-        <img src="fotos/espacio1.jpg" class="active" ondragstart="return false;" oncontextmenu="return false;">
-        <img src="fotos/espacio2.jpg" ondragstart="return false;" oncontextmenu="return false;">
-        <img src="fotos/espacio3.jpg" ondragstart="return false;" oncontextmenu="return false;">
-        <img src="fotos/espacio4.jpg" ondragstart="return false;" oncontextmenu="return false;">
-        <img src="fotos/espacio5.jpg" ondragstart="return false;" oncontextmenu="return false;">
-        <img src="fotos/espacio6.jpg" ondragstart="return false;" oncontextmenu="return false;">
-        <img src="fotos/espacio7.jpg" ondragstart="return false;" oncontextmenu="return false;">
-      </div>
-      <h3 style="text-align: center;">Mis cuadros en el espacio.</h3>
-
-
-
-
-
-<h2> Mi blog</h2>
-<p>Aquí encontrarás explicaciones sobre mis proyectos y los conceptos que los motivaron.</p>
-
-<button class="collapsible">Mi visión del arte. <span class="arrow">▶</span></button>
-<div class="content">
-<article>
-En redacción...
-</article>
-</div>
-
-
-    <button class="collapsible">Sobre mi proyecto 'El Paisaje de la Llave'. <span class="arrow">▶</span></button>
-    <div class="content">
-    <article>
-      <h1>El Paisaje de la Llave</h1>
-      <h2>El “Acordenroscado” en los Conjuntos Flotantes</h2>
-    
-      <h3>Génesis</h3>
-      <p>
-        Al principio, antes de descubrir el poder de la pintura como lenguaje, en mis primeros
-        dibujos de rostros imaginados sentía que traía personajes de otro mundo a este, como
-        lo hacían los pintores-chamanes de la prehistoria.
-      </p>
-      <p>
-        El <em>Paisaje de la Llave</em> es la frontera entre esos mundos: nada la atraviesa,
-        pero en su velo aparecen ondulaciones, como las sombras en la caverna de Platón.
-      </p>
-    
-      <h3>Búsqueda de una gramática</h3>
-      <p>
-        Siempre me interesó la composición básica de los espacios, la interacción de las
-        partes y el espíritu de cada forma. Mis primeras indagaciones se acercaban a la
-        <strong>Gestalt</strong> y a Kandinsky. Con el tiempo entendí el espacio como algo
-        <em>granulado</em>, atómico, repetitivo.
-      </p>
-      <p>
-        En 1988 inicié una serie basada en un módulo caprichoso: la silueta de un rinoceronte,
-        repetida con variaciones de color y orientación. Fue mi primer “átomo pictórico”. Luego
-        vinieron formas no figurativas, diferenciadas pero unificadas por una constante.
-      </p>
-      <blockquote>
-        “Ahora están vivos y llevan inscrita su evolución, como un algoritmo con los requiebros
-        del azar.”
-      </blockquote>
-    
-      <h3>Figura y fondo</h3>
-      <p>
-        La dualidad figura-fondo me llevó a unificar ambos conceptos. La atomización de la
-        figura generó una trama que al mismo tiempo era fondo. El pensamiento matemático se
-        mostró idóneo: sintetiza relaciones comparativas y proporcionales, clasifica lo común
-        y lo diverso.
-      </p>
-      <p>
-        Me inspiré en los pitagóricos, la Kábala y el arte combinatorio de la permutación, que
-        adopté como criterio de modulación. Así surgió otra tensión: lo geométrico y lo
-        orgánico.
-      </p>
-    
-      <h3>Proporción áurea y fractales</h3>
-      <p>
-        Encontré una vía en la <strong>proporción áurea</strong>, “la asimetría más simétrica
-        posible”, y en la <strong>geometría fractal</strong>, que busca el orden en el caos.
-        Ambas confluyen en la naturaleza y comparten la autosimilitud.
-      </p>
-      <p>
-        A lo largo de los noventa fusioné ambas disciplinas, convencido de que estaban
-        relacionadas: la progresión áurea también muestra autosimilitud. Más tarde descubrí
-        lecturas que confirmaban este vínculo matemáticamente.
-      </p>
-    
-      <h3>Literatura como detonante</h3>
-      <p>
-        La literatura ha sido una fuente constante de inspiración. Sospecho que la serie de
-        rinocerontes nació tras leer <em>Rayuela</em>, por la sensación mental que me dejó. 
-        <em>El Aleph</em> de Borges me sigue influyendo: el <em>Paisaje de la Llave</em> es, en
-        parte, una colección de secuencias de alephs.
-      </p>
-      <blockquote>
-        “Una sola vez en mi vida he tenido ocasión de examinar los quince mil dodecasílabos
-        del <em>Poliolbion</em>... Estoy seguro de que ese producto considerable, pero limitado,
-        es menos tedioso que la vasta empresa congénere de Carlos Argentino.”
-        <br>— Jorge Luis Borges, <em>El Aleph</em>
-      </blockquote>
-      <p>
-        Más tarde, <em>Bajo el volcán</em> de Malcolm Lowry me ofreció otra clave: una narración
-        cubista y caótica, escrita en clave cabalista. Sus jardines y selvas resonaban en mí
-        como metáfora de lo geométrico y lo orgánico.
-      </p>
-    
-      <h3>Alquimia y síntesis</h3>
-      <p>
-        Mi proceso creativo adoptó la metáfora de la alquimia: disolución y coagulación,
-        transformación y síntesis. Tras años de investigación, en 2006 comencé a abandonar la
-        proporción áurea en favor de estructuras más claras y cuadradas, sustituyendo la
-        metáfora alquímica por la física cuántica y la teoría de grupos.
-      </p>
-    
-      <h3>Los conjuntos flotantes</h3>
-      <p>
-        El trabajo con composiciones combinatorias me llevó a concebir los
-        <strong>Conjuntos Flotantes</strong>, redes de relaciones empáticas entre partes, un
-        holograma que flota sobre el conjunto. Para ponerlos en acción necesitaba un “ladrillo
-        básico”, como en física se buscó la partícula elemental.
-      </p>
-      <blockquote>
-        “Lo que importa no es el elemento, sino la manera en que está unido a los demás.”
-      </blockquote>
-    
-      <h3>El Acordenroscado</h3>
-      <p>
-        Así nació el <strong>Acordenroscado</strong>, módulo compuesto y semilla de los conjuntos
-        flotantes. Articulado por dos simetrías combinadas, avanza como tornillo o serpiente,
-        metáfora de un campo electromagnético. Sus partes se asocian a notas musicales que
-        generan acordes en expansiones fractales.
-      </p>
-      <p>
-        El Acordenroscado produce espacios visuales y tiempos sonoros ampliables hasta el
-        infinito. Su territorio es un universo regido por un “paisaje de onda”, que este
-        proyecto explora en busca de imágenes y sonidos.
-      </p>
-    
-      <h3>El Paisaje de la Llave</h3>
-      <p>
-        El <em>Paisaje de la Llave</em> actúa como un <em>campo de Higgs</em>, zona de contacto
-        entre energía y materia, entre lo intangible y lo tangible. La visión platónica, llevada
-        al extremo por Gödel, sostiene que las matemáticas existen independientemente de
-        nosotros. Como escribió John Polkinghorne:
-      </p>
-      <blockquote>
-        “Las matemáticas son la llave abstracta que abre la cerradura del mundo físico.”
-      </blockquote>
-      <p>
-        Mi objetivo es construir un ente conceptual y transformarlo en un objeto sensible.
-        El acordenroscado encarna armonía, equilibrio y simetría: condiciones comunes a lo
-        molecular y a lo social.
-      </p>
-    
-      <h3>Sonido y visión</h3>
-      <p>
-        De las imágenes derivan procesos sonoros. La percepción visual es instantánea, mientras
-        que la auditiva es secuencial. Así, la lectura lineal de un espacio plano se traduce en
-        música. He comprobado que las armonías visuales suelen transformarse en armonías
-        musicales.
-      </p>
-    
-      <h3>Memoria y cierre</h3>
-      <p>
-      Al final me di cuenta de que realmente el Paisaje de la LLave era toda esta ”memoria” que intenta explicar tantas cosas, así que el proyecto también deriva en este ensayo y en una película que muestra el proceso creativo.
-      </p>
-      <p>
-      Este proyecto solo divaga sobre el paisaje de la llave, ni alcanza ni cree posible asomarse al paisaje que hay detrás de la puerta que abre. Como la ciencia, que no nos muestra la realidad, sino que nos propone modelos para entender como funciona. Como las sombras en la caverna de Patón.
-      </p>
-    </article>
-  </div>
-  
-  <button class="collapsible">Sobre mi proyecto 'Sobre el volcán' <span class="arrow">▶</span></button>
-  <div class="content">
-  <article>
-  En redacción...
-  </article>
   </div>
 
-  <button class="collapsible">Sobre mi proyecto 'Vórtices entrelazados' <span class="arrow">▶</span></button>
-  <div class="content">
-  <article>
-  En redacción...
-  </article>
+  <div class="galeria-vida">
+
+    <figure class="reveal" style="margin:0">
+      <div class="slider" data-slider data-interval="3500">
+        <img src="fotos/juan1.jpg" class="active" alt="Juan Martín Ríos" ondragstart="return false;" oncontextmenu="return false;">
+        <img src="fotos/juan2.jpg" alt="Juan Martín Ríos" loading="lazy" ondragstart="return false;" oncontextmenu="return false;">
+        <img src="fotos/juan3.jpg" alt="Juan Martín Ríos" loading="lazy" ondragstart="return false;" oncontextmenu="return false;">
+        <img src="fotos/juan4.jpg" alt="Juan Martín Ríos" loading="lazy" ondragstart="return false;" oncontextmenu="return false;">
+      </div>
+      <figcaption class="leyenda-slider">Este soy yo</figcaption>
+    </figure>
+
+    <figure class="reveal" style="margin:0">
+      <div class="slider" data-slider data-interval="4000">
+        <img src="fotos/estudio1.jpg" class="active" alt="El estudio del pintor" ondragstart="return false;" oncontextmenu="return false;">
+        <img src="fotos/estudio2.jpg" alt="El estudio del pintor" loading="lazy" ondragstart="return false;" oncontextmenu="return false;">
+      </div>
+      <figcaption class="leyenda-slider">Este es mi estudio</figcaption>
+    </figure>
+
+    <figure class="reveal" style="margin:0">
+      <div class="slider" data-slider data-interval="4000">
+        <img src="fotos/espacio1.jpg" class="active" alt="Los cuadros en el espacio" ondragstart="return false;" oncontextmenu="return false;">
+        <img src="fotos/espacio2.jpg" alt="Los cuadros en el espacio" loading="lazy" ondragstart="return false;" oncontextmenu="return false;">
+        <img src="fotos/espacio3.jpg" alt="Los cuadros en el espacio" loading="lazy" ondragstart="return false;" oncontextmenu="return false;">
+        <img src="fotos/espacio4.jpg" alt="Los cuadros en el espacio" loading="lazy" ondragstart="return false;" oncontextmenu="return false;">
+        <img src="fotos/espacio5.jpg" alt="Los cuadros en el espacio" loading="lazy" ondragstart="return false;" oncontextmenu="return false;">
+        <img src="fotos/espacio6.jpg" alt="Los cuadros en el espacio" loading="lazy" ondragstart="return false;" oncontextmenu="return false;">
+        <img src="fotos/espacio7.jpg" alt="Los cuadros en el espacio" loading="lazy" ondragstart="return false;" oncontextmenu="return false;">
+      </div>
+      <figcaption class="leyenda-slider">Mis cuadros en el espacio</figcaption>
+    </figure>
+
   </div>
 
-  <script>
-    // Script para sliders de cada tarjeta
-    document.querySelectorAll("[data-slider]").forEach(slider => {
-      const images = slider.querySelectorAll("img");
-      let index = 0;
-      setInterval(() => {
-        images[index].classList.remove("active");
-        index = (index + 1) % images.length;
-        images[index].classList.add("active");
-      }, 3500); // cambia cada 2s
-    });
-  </script>
+  <!-- ==================== ESCRITOS ==================== -->
 
-  <script>
-    const collapsibles = document.querySelectorAll(".collapsible");
-    collapsibles.forEach(btn => {
-      btn.addEventListener("click", function() {
-        this.classList.toggle("active");
-        const content = this.nextElementSibling;
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
-        }
-      });
-    });
-  </script>
+  <section class="seccion">
+    <div class="seccion-cabecera reveal">
+      <span class="indice">§</span>
+      <h2>Escritos</h2>
+      <span class="nota">Los conceptos detrás de la obra</span>
+    </div>
 
+    <p class="reveal" style="max-width:62ch; color:var(--papel-70); margin-bottom:2.5rem;">
+      Aquí encontrarás explicaciones sobre mis proyectos y los conceptos que los motivaron.
+    </p>
 
+    <div class="reveal">
+      <button class="collapsible"><span><span class="num">I</span>Mi visión del arte</span><span class="arrow">▶</span></button>
+      <div class="content">
+        <article>
+          En redacción...
+        </article>
+      </div>
 
-  </main>
+      <button class="collapsible"><span><span class="num">II</span>El Paisaje de la Llave — El “Acordenroscado” en los Conjuntos Flotantes</span><span class="arrow">▶</span></button>
+      <div class="content">
+        <article>
+          <h1>El Paisaje de la Llave</h1>
+          <h2>El “Acordenroscado” en los Conjuntos Flotantes</h2>
 
+          <h3>Génesis</h3>
+          <p>
+            Al principio, antes de descubrir el poder de la pintura como lenguaje, en mis primeros
+            dibujos de rostros imaginados sentía que traía personajes de otro mundo a este, como
+            lo hacían los pintores-chamanes de la prehistoria.
+          </p>
+          <p>
+            El <em>Paisaje de la Llave</em> es la frontera entre esos mundos: nada la atraviesa,
+            pero en su velo aparecen ondulaciones, como las sombras en la caverna de Platón.
+          </p>
 
+          <h3>Búsqueda de una gramática</h3>
+          <p>
+            Siempre me interesó la composición básica de los espacios, la interacción de las
+            partes y el espíritu de cada forma. Mis primeras indagaciones se acercaban a la
+            <strong>Gestalt</strong> y a Kandinsky. Con el tiempo entendí el espacio como algo
+            <em>granulado</em>, atómico, repetitivo.
+          </p>
+          <p>
+            En 1988 inicié una serie basada en un módulo caprichoso: la silueta de un rinoceronte,
+            repetida con variaciones de color y orientación. Fue mi primer “átomo pictórico”. Luego
+            vinieron formas no figurativas, diferenciadas pero unificadas por una constante.
+          </p>
+          <blockquote>
+            “Ahora están vivos y llevan inscrita su evolución, como un algoritmo con los requiebros
+            del azar.”
+          </blockquote>
 
+          <h3>Figura y fondo</h3>
+          <p>
+            La dualidad figura-fondo me llevó a unificar ambos conceptos. La atomización de la
+            figura generó una trama que al mismo tiempo era fondo. El pensamiento matemático se
+            mostró idóneo: sintetiza relaciones comparativas y proporcionales, clasifica lo común
+            y lo diverso.
+          </p>
+          <p>
+            Me inspiré en los pitagóricos, la Kábala y el arte combinatorio de la permutación, que
+            adopté como criterio de modulación. Así surgió otra tensión: lo geométrico y lo
+            orgánico.
+          </p>
 
+          <h3>Proporción áurea y fractales</h3>
+          <p>
+            Encontré una vía en la <strong>proporción áurea</strong>, “la asimetría más simétrica
+            posible”, y en la <strong>geometría fractal</strong>, que busca el orden en el caos.
+            Ambas confluyen en la naturaleza y comparten la autosimilitud.
+          </p>
+          <p>
+            A lo largo de los noventa fusioné ambas disciplinas, convencido de que estaban
+            relacionadas: la progresión áurea también muestra autosimilitud. Más tarde descubrí
+            lecturas que confirmaban este vínculo matemáticamente.
+          </p>
 
-<!-- cargar footer -->
+          <h3>Literatura como detonante</h3>
+          <p>
+            La literatura ha sido una fuente constante de inspiración. Sospecho que la serie de
+            rinocerontes nació tras leer <em>Rayuela</em>, por la sensación mental que me dejó.
+            <em>El Aleph</em> de Borges me sigue influyendo: el <em>Paisaje de la Llave</em> es, en
+            parte, una colección de secuencias de alephs.
+          </p>
+          <blockquote>
+            “Una sola vez en mi vida he tenido ocasión de examinar los quince mil dodecasílabos
+            del <em>Poliolbion</em>... Estoy seguro de que ese producto considerable, pero limitado,
+            es menos tedioso que la vasta empresa congénere de Carlos Argentino.”
+            <br>— Jorge Luis Borges, <em>El Aleph</em>
+          </blockquote>
+          <p>
+            Más tarde, <em>Bajo el volcán</em> de Malcolm Lowry me ofreció otra clave: una narración
+            cubista y caótica, escrita en clave cabalista. Sus jardines y selvas resonaban en mí
+            como metáfora de lo geométrico y lo orgánico.
+          </p>
 
+          <h3>Alquimia y síntesis</h3>
+          <p>
+            Mi proceso creativo adoptó la metáfora de la alquimia: disolución y coagulación,
+            transformación y síntesis. Tras años de investigación, en 2006 comencé a abandonar la
+            proporción áurea en favor de estructuras más claras y cuadradas, sustituyendo la
+            metáfora alquímica por la física cuántica y la teoría de grupos.
+          </p>
+
+          <h3>Los conjuntos flotantes</h3>
+          <p>
+            El trabajo con composiciones combinatorias me llevó a concebir los
+            <strong>Conjuntos Flotantes</strong>, redes de relaciones empáticas entre partes, un
+            holograma que flota sobre el conjunto. Para ponerlos en acción necesitaba un “ladrillo
+            básico”, como en física se buscó la partícula elemental.
+          </p>
+          <blockquote>
+            “Lo que importa no es el elemento, sino la manera en que está unido a los demás.”
+          </blockquote>
+
+          <h3>El Acordenroscado</h3>
+          <p>
+            Así nació el <strong>Acordenroscado</strong>, módulo compuesto y semilla de los conjuntos
+            flotantes. Articulado por dos simetrías combinadas, avanza como tornillo o serpiente,
+            metáfora de un campo electromagnético. Sus partes se asocian a notas musicales que
+            generan acordes en expansiones fractales.
+          </p>
+          <p>
+            El Acordenroscado produce espacios visuales y tiempos sonoros ampliables hasta el
+            infinito. Su territorio es un universo regido por un “paisaje de onda”, que este
+            proyecto explora en busca de imágenes y sonidos.
+          </p>
+
+          <h3>El Paisaje de la Llave</h3>
+          <p>
+            El <em>Paisaje de la Llave</em> actúa como un <em>campo de Higgs</em>, zona de contacto
+            entre energía y materia, entre lo intangible y lo tangible. La visión platónica, llevada
+            al extremo por Gödel, sostiene que las matemáticas existen independientemente de
+            nosotros. Como escribió John Polkinghorne:
+          </p>
+          <blockquote>
+            “Las matemáticas son la llave abstracta que abre la cerradura del mundo físico.”
+          </blockquote>
+          <p>
+            Mi objetivo es construir un ente conceptual y transformarlo en un objeto sensible.
+            El acordenroscado encarna armonía, equilibrio y simetría: condiciones comunes a lo
+            molecular y a lo social.
+          </p>
+
+          <h3>Sonido y visión</h3>
+          <p>
+            De las imágenes derivan procesos sonoros. La percepción visual es instantánea, mientras
+            que la auditiva es secuencial. Así, la lectura lineal de un espacio plano se traduce en
+            música. He comprobado que las armonías visuales suelen transformarse en armonías
+            musicales.
+          </p>
+
+          <h3>Memoria y cierre</h3>
+          <p>
+            Al final me di cuenta de que realmente el Paisaje de la LLave era toda esta ”memoria” que intenta explicar tantas cosas, así que el proyecto también deriva en este ensayo y en una película que muestra el proceso creativo.
+          </p>
+          <p>
+            Este proyecto solo divaga sobre el paisaje de la llave, ni alcanza ni cree posible asomarse al paisaje que hay detrás de la puerta que abre. Como la ciencia, que no nos muestra la realidad, sino que nos propone modelos para entender como funciona. Como las sombras en la caverna de Patón.
+          </p>
+        </article>
+      </div>
+
+      <button class="collapsible"><span><span class="num">III</span>Sobre el volcán</span><span class="arrow">▶</span></button>
+      <div class="content">
+        <article>
+          En redacción...
+        </article>
+      </div>
+
+      <button class="collapsible" style="border-bottom: 1px solid var(--linea);"><span><span class="num">IV</span>Vórtices entrelazados</span><span class="arrow">▶</span></button>
+      <div class="content">
+        <article>
+          En redacción...
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-interior">
+    <div class="footer-marca">Juan Martín <em>Ríos</em></div>
+    <div class="footer-enlaces">
+      <a href="contacto.html">Contacto</a>
+      <a href="mailto:juanmartin.faj@gmail.com" class="social-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 5.333-8-5.333V6h16zM4 18V8.489l8 5.333 8-5.333V18H4z"/>
+        </svg>
+        juanmartin.faj@gmail.com
+      </a>
+      <a href="https://www.instagram.com/juanmartinrios.art" target="_blank" rel="noopener" class="social-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3zm5 2a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+        </svg>
+        Instagram
+      </a>
+    </div>
+  </div>
+  <div class="footer-legal">
+    <p>&copy; 2026 Juan Martín Ríos. Todos los derechos reservados. Queda prohibida la reproducción o el uso de las imágenes sin autorización expresa del autor.</p>
+  </div>
+</footer>
+
+<script src="campo.js" defer></script>
 <script>
-  fetch("footer.html") 
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("footer").innerHTML = data;
-    })
-    .catch(err => console.error("Error al cargar el footer:", err));
+  if (window.history.length <= 1) {
+    document.getElementById("volver-atras").style.display = "none";
+  }
 </script>
-
-<div id="footer"></div>
 
 </body>
 </html>
