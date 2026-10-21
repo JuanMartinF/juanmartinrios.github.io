@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Juan Martín Ríos — Pintura</title>
-  <meta name="description" content="Galería online del pintor Juan Martín Ríos. Teselaciones, vórtices y campos electromagnéticos: la física y las matemáticas convertidas en pintura.">
+  <meta name="description" content="Galería de Juan Martín Ríos. Arte, álgebra y geometría.">
   <meta name="keywords" content="arte, pintura, cuadros, galería, online, abstracto, geometría, electromagnetismo, teselación, juan martin rios">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,15 +39,9 @@
   <canvas id="campo" aria-hidden="true"></canvas>
 
   <div class="hero-interior">
-    <p class="kicker">Pintura · Física · Matemáticas</p>
+    <p class="kicker">Arte · Álgebra · Geometría</p>
 
     <h2 class="hero-titulo">Juan Martín <em>Ríos</em></h2>
-
-    <p class="hero-sub">
-      Óleos que indagan la estructura íntima del espacio: teselaciones,
-      vórtices y campos electromagnéticos. La teoría de grupos y la
-      mecánica cuántica, convertidas en pintura.
-    </p>
 
     <div class="hero-acciones">
       <a class="btn" href="proyectos.html">Explorar la obra</a>
@@ -61,8 +55,7 @@
   </div>
 
   <div class="hero-pie">
-    <span>Granada — Estudio del pintor</span>
-    <span>Catálogo en digitalización</span>
+    <span>Granada</span>
     <span><span class="flecha-abajo">↓</span> Desplázate</span>
   </div>
 </section>
@@ -161,6 +154,153 @@
     </div>
   </section>
 
+  <!-- ==================== LA PINTURA COMO ALGORITMO ==================== -->
+
+  <section class="seccion proceso" id="proceso" data-proceso>
+    <div class="seccion-cabecera reveal">
+      <span class="indice">02</span>
+      <h2>El cuadro como sistema</h2>
+      <span class="nota">22 estados documentales</span>
+    </div>
+
+    <div class="proceso-recorrido">
+      <div class="proceso-visor reveal">
+        <div class="proceso-imagen" tabindex="0" role="img"
+             aria-label="Secuencia documental del proceso pictórico. Estado 1 de 22.">
+          <img class="proceso-frame activo" data-frame-a
+               src="slices/web/slice_001.webp"
+               alt="Primer estado documentado: matriz ondulante y comienzo de la regla RR">
+          <img class="proceso-frame" data-frame-b alt="" aria-hidden="true">
+
+          <div class="proceso-metrica">
+            <span data-proceso-fase>Matriz</span>
+            <span><b data-proceso-actual>01</b> / 22</span>
+          </div>
+          <div class="proceso-progreso" aria-hidden="true">
+            <span data-proceso-progreso></span>
+          </div>
+        </div>
+
+        <div class="proceso-controles" aria-label="Controles de la secuencia">
+          <button type="button" data-proceso-anterior aria-label="Estado anterior">←</button>
+          <input type="range" min="1" max="22" value="1" step="1"
+                 data-proceso-range aria-label="Estado del proceso pictórico">
+          <button type="button" data-proceso-siguiente aria-label="Estado siguiente">→</button>
+        </div>
+
+        <p class="proceso-pie">Documento de trabajo</p>
+      </div>
+
+      <div class="proceso-capitulos">
+        <article class="proceso-paso activo reveal" data-from="1" data-to="1" data-fase="Matriz">
+          <h3>Matriz</h3>
+        </article>
+
+        <article class="proceso-paso reveal" data-from="2" data-to="10" data-fase="RR">
+          <h3>RR</h3>
+        </article>
+
+        <article class="proceso-paso reveal" data-from="11" data-to="13" data-fase="RN">
+          <h3>RN</h3>
+        </article>
+
+        <article class="proceso-paso reveal" data-from="14" data-to="18" data-fase="⊕">
+          <h3>⊕</h3>
+        </article>
+
+        <article class="proceso-paso reveal" data-from="19" data-to="22" data-fase="Campo">
+          <h3>Campo</h3>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LABORATORIO ==================== -->
+
+  <section class="seccion laboratorio" id="laboratorio">
+    <div class="seccion-cabecera reveal">
+      <span class="indice">03</span>
+      <h2>Laboratorio</h2>
+    </div>
+
+    <article class="estudio estudio-klein reveal" data-klein>
+      <header class="estudio-cabecera">
+        <div>
+          <span class="estudio-id">Estudio 01</span>
+          <h3>Superposición cromática</h3>
+        </div>
+      </header>
+
+      <div class="estudio-cuerpo">
+        <div class="estudio-lienzo">
+          <canvas data-klein-canvas width="760" height="440"
+                  aria-label="Patrón de ondas que crece según la regla cromática"></canvas>
+        </div>
+
+        <div class="klein-panel">
+          <div class="klein-operacion" aria-live="polite">
+            <label>
+              Regla α
+              <select data-klein-a aria-label="Primera regla cromática"></select>
+            </label>
+            <span class="klein-signo">⊕</span>
+            <label>
+              Regla β
+              <select data-klein-b aria-label="Segunda regla cromática"></select>
+            </label>
+            <span class="klein-signo">=</span>
+            <output data-klein-resultado>AV</output>
+          </div>
+
+          <div class="klein-pasos" role="group" aria-label="Pasos">
+            <button type="button" data-klein-paso="0">1</button>
+            <button type="button" data-klein-paso="1">2</button>
+            <button type="button" data-klein-paso="2">4</button>
+            <button type="button" data-klein-paso="3">8</button>
+          </div>
+
+          <div class="klein-leyenda" aria-label="Colores">
+            <span><i data-color="A"></i>A azul</span>
+            <span><i data-color="R"></i>R rojo</span>
+            <span><i data-color="N"></i>N naranja</span>
+            <span><i data-color="V"></i>V verde</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="estudio estudio-simetria reveal" data-simetria>
+      <header class="estudio-cabecera">
+        <div>
+          <span class="estudio-id">Estudio 02</span>
+          <h3>Simetría</h3>
+        </div>
+      </header>
+
+      <div class="estudio-cuerpo">
+        <div class="estudio-lienzo">
+          <canvas data-simetria-canvas width="760" height="440"
+                  aria-label="Estudio de un módulo ondulante que se duplica mediante simetrías"></canvas>
+        </div>
+
+        <div class="simetria-panel">
+          <div class="simetria-estado">
+            <span>Escala</span>
+            <strong data-simetria-escala>1</strong>
+            <span data-simetria-secuencia>módulo</span>
+          </div>
+
+          <div class="simetria-botones">
+            <button type="button" data-transform="h">Reflejar H</button>
+            <button type="button" data-transform="v">Reflejar V</button>
+            <button type="button" data-transform="r">Girar 180°</button>
+          </div>
+          <button type="button" class="simetria-reset" data-simetria-reset>Reiniciar</button>
+        </div>
+      </div>
+    </article>
+  </section>
+
   <!-- ==================== CITA ==================== -->
 
   <section class="cita reveal">
@@ -175,7 +315,7 @@
 
   <section class="seccion" id="proyectos">
     <div class="seccion-cabecera reveal">
-      <span class="indice">02</span>
+      <span class="indice">04</span>
       <h2>Proyectos</h2>
       <span class="nota">1988 — actualidad</span>
     </div>
@@ -261,6 +401,7 @@
 </footer>
 
 <script src="campo.js" defer></script>
+<script src="proceso.js" defer></script>
 
 </body>
 </html>

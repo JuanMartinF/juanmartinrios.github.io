@@ -293,7 +293,7 @@ a.btn {
   font-weight: 330;
   letter-spacing: -0.025em;
   line-height: 0.98;
-  margin: 0 0 1.6rem;
+  margin: 0 0 2.2rem;
 }
 
 .hero-titulo em {
@@ -1148,6 +1148,494 @@ footer .social-link { display: inline-flex; align-items: center; gap: 0.5rem; }
 .catalogo img { border: 1px solid var(--linea-suave); border-radius: 0; box-shadow: none; }
 .catalogo p { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.12em; color: var(--papel-50); }
 
+/* ---------- La pintura como algoritmo ---------- */
+
+.proceso-recorrido {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.72fr);
+  gap: clamp(2rem, 6vw, 5.5rem);
+  align-items: start;
+}
+
+.proceso-visor {
+  position: sticky;
+  top: 104px;
+  align-self: start;
+}
+
+.proceso-imagen {
+  position: relative;
+  aspect-ratio: 576 / 464;
+  overflow: hidden;
+  background: #080705;
+  border: 1px solid var(--linea);
+  cursor: ew-resize;
+}
+
+.proceso-imagen:focus-visible {
+  outline-offset: 6px;
+}
+
+.proceso-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.006);
+  transition:
+    opacity 0.42s ease,
+    transform 0.8s var(--transicion);
+}
+
+.proceso-frame.activo {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.proceso-metrica {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 0.9rem;
+  background: linear-gradient(to bottom, rgba(11, 10, 8, 0.76), transparent);
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--papel-70);
+  pointer-events: none;
+}
+
+.proceso-metrica b {
+  color: var(--ocre-claro);
+  font-weight: 500;
+}
+
+.proceso-progreso {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: rgba(11, 10, 8, 0.34);
+  pointer-events: none;
+}
+
+.proceso-progreso span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--ocre);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.proceso-controles {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--linea-suave);
+}
+
+.proceso-controles button,
+.simetria-botones button,
+.simetria-reset {
+  background: transparent;
+  border: 1px solid var(--linea);
+  border-radius: 0;
+  color: var(--papel-70);
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    color 0.3s,
+    border-color 0.3s,
+    background 0.3s;
+}
+
+.proceso-controles button {
+  width: 2.45rem;
+  height: 2.25rem;
+  padding: 0;
+  font-size: 0.88rem;
+}
+
+.proceso-controles button:hover,
+.simetria-botones button:hover,
+.simetria-reset:hover {
+  color: var(--negro);
+  border-color: var(--ocre);
+  background: var(--ocre);
+}
+
+.proceso-controles button:disabled,
+.simetria-botones button:disabled,
+.simetria-reset:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+  color: var(--papel-35);
+  border-color: var(--linea-suave);
+  background: transparent;
+}
+
+.proceso-controles input[type="range"] {
+  width: 100%;
+  height: 1px;
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  background: var(--linea);
+  cursor: ew-resize;
+}
+
+.proceso-controles input[type="range"]::-webkit-slider-thumb {
+  width: 9px;
+  height: 9px;
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  border-radius: 0;
+  background: var(--ocre);
+  transform: rotate(45deg);
+}
+
+.proceso-controles input[type="range"]::-moz-range-thumb {
+  width: 9px;
+  height: 9px;
+  border: none;
+  border-radius: 0;
+  background: var(--ocre);
+  transform: rotate(45deg);
+}
+
+.proceso-pie {
+  margin: 0.7rem 0 0;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--papel-35);
+}
+
+.proceso-capitulos {
+  margin-top: -4vh;
+  padding-bottom: 8vh;
+}
+
+.proceso-paso {
+  min-height: 42vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 3rem 0 3rem clamp(1.2rem, 3vw, 2rem);
+  border-left: 1px solid var(--linea);
+  color: var(--papel-50);
+  transition:
+    color 0.55s,
+    border-color 0.55s;
+}
+
+.proceso-paso::before {
+  content: "";
+  position: absolute;
+  left: -3px;
+  top: 50%;
+  width: 5px;
+  height: 5px;
+  transform: translateY(-50%) rotate(45deg);
+  background: var(--linea);
+  transition:
+    background 0.55s,
+    transform 0.55s var(--transicion);
+}
+
+.proceso-paso.activo {
+  color: var(--papel-70);
+  border-left-color: rgba(201, 154, 60, 0.55);
+}
+
+.proceso-paso.activo::before {
+  background: var(--ocre);
+  transform: translateY(-50%) rotate(45deg) scale(1.55);
+}
+
+.proceso-num,
+.estudio-id {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ocre);
+}
+
+.proceso-paso[data-to="10"] { min-height: 76vh; }
+.proceso-paso[data-to="13"] { min-height: 50vh; }
+.proceso-paso[data-to="18"] { min-height: 62vh; }
+.proceso-paso[data-to="22"] { min-height: 54vh; }
+
+.proceso-paso h3 {
+  margin: 0;
+  font-size: clamp(1.45rem, 2.8vw, 2.15rem);
+  font-weight: 350;
+  color: inherit;
+}
+
+.proceso-paso.activo h3 { color: var(--papel); }
+
+.proceso-paso p { margin: 0; }
+
+.proceso-paso strong {
+  color: var(--papel);
+  font-weight: 450;
+}
+
+.proceso-paso code,
+.estudio-nota code {
+  font-family: var(--mono);
+  font-size: 0.8em;
+  color: var(--ocre-claro);
+  white-space: nowrap;
+}
+
+/* ---------- Laboratorio matemático ---------- */
+
+.estudio {
+  border-top: 1px solid var(--linea);
+  padding: clamp(2rem, 5vw, 3.5rem) 0 clamp(4rem, 9vw, 7rem);
+}
+
+.estudio:last-child {
+  border-bottom: 1px solid var(--linea);
+}
+
+.estudio-cabecera {
+  margin-bottom: clamp(1.6rem, 4vw, 2.6rem);
+}
+
+.estudio-cabecera h3 {
+  margin: 0.65rem 0 0;
+  font-size: clamp(1.7rem, 3.6vw, 2.7rem);
+  font-weight: 340;
+}
+
+.estudio-cuerpo {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(260px, 0.65fr);
+  gap: clamp(1.6rem, 5vw, 4rem);
+  align-items: stretch;
+}
+
+.estudio-lienzo {
+  min-width: 0;
+  border: 1px solid var(--linea);
+  background: #0e0c09;
+}
+
+.estudio-klein .estudio-lienzo {
+  background: #d3c6af;
+  border-color: rgba(90, 70, 48, 0.35);
+}
+
+.estudio-lienzo canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 19 / 11;
+}
+
+.klein-panel,
+.simetria-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  padding-left: clamp(1.2rem, 3vw, 2rem);
+  border-left: 1px solid var(--linea-suave);
+}
+
+.klein-operacion {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 0.65rem;
+  align-items: end;
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid var(--linea-suave);
+}
+
+.klein-operacion label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--papel-35);
+}
+
+.klein-operacion select {
+  width: 100%;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--papel-35);
+  border-radius: 0;
+  padding: 0.3rem 1.3rem 0.3rem 0;
+  color: var(--papel);
+  font-family: var(--mono);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.klein-signo {
+  padding-bottom: 0.4rem;
+  font-family: var(--mono);
+  color: var(--ocre);
+}
+
+.klein-operacion output {
+  grid-column: 1 / -1;
+  margin-top: 0.8rem;
+  font-family: var(--mono);
+  font-size: clamp(2.2rem, 5vw, 3.7rem);
+  line-height: 1;
+  letter-spacing: 0.08em;
+  color: var(--ocre-claro);
+}
+
+.klein-pasos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.45rem;
+  margin-top: 1.15rem;
+}
+
+.klein-pasos button {
+  background: transparent;
+  border: 1px solid var(--linea);
+  border-radius: 0;
+  color: var(--papel-50);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  padding: 0.55rem 0;
+  cursor: pointer;
+}
+
+.klein-pasos button[aria-pressed="true"] {
+  color: var(--negro);
+  background: var(--ocre);
+  border-color: var(--ocre);
+}
+
+.klein-leyenda {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1.3rem;
+  padding: 1.25rem 0 0;
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  color: var(--papel-50);
+}
+
+.klein-leyenda span {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.klein-leyenda i {
+  width: 0.72rem;
+  height: 0.72rem;
+  transform: rotate(45deg);
+  background: var(--muestra);
+}
+
+.klein-leyenda i[data-color="A"] { --muestra: #67b7c0; }
+.klein-leyenda i[data-color="R"] { --muestra: #96372c; }
+.klein-leyenda i[data-color="N"] { --muestra: #c46b2e; }
+.klein-leyenda i[data-color="V"] { --muestra: #547d49; }
+
+.estudio-nota {
+  margin: auto 0 0;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--linea-suave);
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: var(--papel-35);
+}
+
+.simetria-estado {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: baseline;
+  gap: 1rem;
+  padding-bottom: 1.3rem;
+  border-bottom: 1px solid var(--linea-suave);
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--papel-35);
+}
+
+.simetria-estado strong {
+  font-size: 2.7rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--ocre-claro);
+}
+
+.simetria-estado span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.simetria-instruccion {
+  margin: 1.3rem 0 1rem;
+  font-size: 0.88rem;
+  color: var(--papel-50);
+}
+
+.simetria-botones {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.55rem;
+  margin-top: 1.2rem;
+}
+
+.simetria-botones button,
+.simetria-reset {
+  width: 100%;
+  padding: 0.72rem 0.8rem;
+  text-align: left;
+}
+
+.simetria-reset {
+  margin-top: 0.55rem;
+  border-style: dashed;
+  color: var(--papel-35);
+}
+
 /* ---------- Reveal on scroll ---------- */
 
 .reveal {
@@ -1169,6 +1657,14 @@ footer .social-link { display: inline-flex; align-items: center; gap: 0.5rem; }
   .obras-grid .obra { grid-column: 1 / -1 !important; margin-top: 0 !important; }
   .rejilla-proyectos { grid-template-columns: 1fr; }
   .rejilla-proyectos > .ficha-proyecto:nth-child(even) { transform: none; }
+  .estudio-cuerpo { grid-template-columns: 1fr; }
+  .klein-panel,
+  .simetria-panel {
+    padding: 1.5rem 0 0;
+    border-left: 0;
+    border-top: 1px solid var(--linea-suave);
+  }
+  .klein-leyenda { gap: 0.55rem 1rem; }
   .footer-interior { grid-template-columns: 1fr; align-items: start; }
   .footer-enlaces { justify-self: start; text-align: left; }
 }
@@ -1224,6 +1720,48 @@ footer .social-link { display: inline-flex; align-items: center; gap: 0.5rem; }
 
   .seccion-cabecera .nota { display: none; }
 
+  .proceso-recorrido { grid-template-columns: 1fr; gap: 1.5rem; }
+
+  .proceso-visor {
+    position: relative;
+    top: auto;
+  }
+
+  .proceso-capitulos {
+    margin: 0;
+    padding: 0;
+  }
+
+  .proceso-paso,
+  .proceso-paso[data-to] {
+    display: none;
+    min-height: 0;
+    padding: 1.5rem 0 1rem 1.2rem;
+  }
+
+  .proceso-paso.activo { display: flex; }
+
+  .proceso-paso::before { top: 2.15rem; }
+
+  .proceso-pie { line-height: 1.7; }
+
+  .estudio { padding-bottom: 4rem; }
+  .estudio-cuerpo { gap: 1rem; }
+
+  .estudio-lienzo canvas { min-height: 255px; }
+
+  .klein-leyenda { grid-template-columns: 1fr; }
+
+  .simetria-botones {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .simetria-botones button {
+    padding: 0.72rem 0.35rem;
+    text-align: center;
+    letter-spacing: 0.08em;
+  }
+
   .contact-form label { margin-bottom: -1rem; }
 }
 
@@ -1237,4 +1775,6 @@ footer .social-link { display: inline-flex; align-items: center; gap: 0.5rem; }
     transition-duration: 0.01ms !important;
   }
   .reveal { opacity: 1; transform: none; filter: none; }
+  .proceso-frame,
+  .proceso-progreso span { transition: none; }
 }
